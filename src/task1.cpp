@@ -2,7 +2,7 @@
 unsigned long findValue(unsigned int min,unsigned max){
 	auto i = 1UL;
 	while(true){
-		is_divided = 1;
+		char is_divided = 1;
 		for (int j = min; j <= max; j++){
 			if (i%j != 0){
 				is_divided =0;
