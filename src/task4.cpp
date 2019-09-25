@@ -3,7 +3,7 @@
 //
 #include <iostream>
 #include <vector>
-#include <string>
+#include <string.h>
 
 using namespace std;
 
