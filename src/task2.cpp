@@ -49,7 +49,7 @@ unsigned long long nPrime(unsigned n) {
         } else
             primes[i] = p + 1; // запоминаем новое простое число
     }
-
+    delete (numbers);
     return primes[n - 1];
 
 }

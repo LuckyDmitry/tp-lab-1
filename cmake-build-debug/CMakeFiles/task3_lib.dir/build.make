@@ -57,22 +57,9 @@ include CMakeFiles/task3_lib.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/task3_lib.dir/flags.make
 
-CMakeFiles/task3_lib.dir/src/task2.cpp.o: CMakeFiles/task3_lib.dir/flags.make
-CMakeFiles/task3_lib.dir/src/task2.cpp.o: ../src/task2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ilasolovev/Desktop/University/TOPandPO/tp-lab-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/task3_lib.dir/src/task2.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task3_lib.dir/src/task2.cpp.o -c /Users/ilasolovev/Desktop/University/TOPandPO/tp-lab-1/src/task2.cpp
-
-CMakeFiles/task3_lib.dir/src/task2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task3_lib.dir/src/task2.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ilasolovev/Desktop/University/TOPandPO/tp-lab-1/src/task2.cpp > CMakeFiles/task3_lib.dir/src/task2.cpp.i
-
-CMakeFiles/task3_lib.dir/src/task2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task3_lib.dir/src/task2.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ilasolovev/Desktop/University/TOPandPO/tp-lab-1/src/task2.cpp -o CMakeFiles/task3_lib.dir/src/task2.cpp.s
-
 CMakeFiles/task3_lib.dir/src/task3.cpp.o: CMakeFiles/task3_lib.dir/flags.make
 CMakeFiles/task3_lib.dir/src/task3.cpp.o: ../src/task3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ilasolovev/Desktop/University/TOPandPO/tp-lab-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/task3_lib.dir/src/task3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ilasolovev/Desktop/University/TOPandPO/tp-lab-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/task3_lib.dir/src/task3.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task3_lib.dir/src/task3.cpp.o -c /Users/ilasolovev/Desktop/University/TOPandPO/tp-lab-1/src/task3.cpp
 
 CMakeFiles/task3_lib.dir/src/task3.cpp.i: cmake_force
@@ -85,17 +72,15 @@ CMakeFiles/task3_lib.dir/src/task3.cpp.s: cmake_force
 
 # Object files for target task3_lib
 task3_lib_OBJECTS = \
-"CMakeFiles/task3_lib.dir/src/task2.cpp.o" \
 "CMakeFiles/task3_lib.dir/src/task3.cpp.o"
 
 # External object files for target task3_lib
 task3_lib_EXTERNAL_OBJECTS =
 
-libtask3_lib.a: CMakeFiles/task3_lib.dir/src/task2.cpp.o
 libtask3_lib.a: CMakeFiles/task3_lib.dir/src/task3.cpp.o
 libtask3_lib.a: CMakeFiles/task3_lib.dir/build.make
 libtask3_lib.a: CMakeFiles/task3_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ilasolovev/Desktop/University/TOPandPO/tp-lab-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libtask3_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ilasolovev/Desktop/University/TOPandPO/tp-lab-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libtask3_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/task3_lib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/task3_lib.dir/link.txt --verbose=$(VERBOSE)
 

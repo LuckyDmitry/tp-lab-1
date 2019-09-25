@@ -498,7 +498,6 @@
 		</Unit>
 		<Unit filename="/Users/ilasolovev/Desktop/University/TOPandPO/tp-lab-1/src/task2.cpp">
 			<Option target="task2_lib"/>
-			<Option target="task3_lib"/>
 		</Unit>
 		<Unit filename="/Users/ilasolovev/Desktop/University/TOPandPO/tp-lab-1/src/task3.cpp">
 			<Option target="task3_lib"/>

@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/task3_lib.dir/src/task2.cpp.o"
   "CMakeFiles/task3_lib.dir/src/task3.cpp.o"
   "libtask3_lib.pdb"
   "libtask3_lib.a"

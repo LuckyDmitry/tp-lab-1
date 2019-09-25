@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/ilasolovev/Desktop/University/TOPandPO/tp-lab-1/src/task2.cpp" "/Users/ilasolovev/Desktop/University/TOPandPO/tp-lab-1/cmake-build-debug/CMakeFiles/task3_lib.dir/src/task2.cpp.o"
   "/Users/ilasolovev/Desktop/University/TOPandPO/tp-lab-1/src/task3.cpp" "/Users/ilasolovev/Desktop/University/TOPandPO/tp-lab-1/cmake-build-debug/CMakeFiles/task3_lib.dir/src/task3.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
