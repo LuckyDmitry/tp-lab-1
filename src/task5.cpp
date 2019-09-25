@@ -1,9 +1,9 @@
 //
 // Created by Илья Соловьёв on 25/09/2019.
 //
-using namespace std;
-
 #include <string.h>
+
+using namespace std;
 
 void split(char ***result, int *N, char *buf, char ch) {
     int n = strlen(buf);
@@ -18,9 +18,10 @@ void split(char ***result, int *N, char *buf, char ch) {
             pos++;
         }
         char *str = new char[pos - left + 1];
-        str[strlen(str) - 1] = 0;
+        str[0] = 0;
         for (int i = 0; i < pos - left; i++) {
             str[i] = buf[left + i];
+            str[i + 1] = 0;
         }
 
 
