@@ -1,5 +1,6 @@
 #include <iostream>
 #include "task4.h"
+#include <string.h>
 
 using namespace std;
 
