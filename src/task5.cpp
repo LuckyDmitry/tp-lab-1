@@ -17,10 +17,12 @@ void split(char ***result, int *N, char *buf, char ch) {
         while ((buf[pos] != ch) && (pos < n)) {
             pos++;
         }
-        char *str = new char[pos - left];
+        char *str = new char[pos - left + 1];
+        str[strlen(str) - 1] = 0;
         for (int i = 0; i < pos - left; i++) {
             str[i] = buf[left + i];
         }
+
 
         res[numberOfStrings] = str;
         numberOfStrings++;
