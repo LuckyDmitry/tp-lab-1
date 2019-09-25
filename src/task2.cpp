@@ -11,7 +11,7 @@ bool checkPrime(unsigned int value) {
     return 1;
 }
 
-unsigned long long nPrime(unsigned n) {
+/*unsigned long long nPrime(unsigned n) {
     int size = n; // число элементов для массива чисел для просеивания
     int *primes = new int[n]; // массив простых чисел
     int *numbers = new int[size]; // массив для чисел
@@ -52,6 +52,20 @@ unsigned long long nPrime(unsigned n) {
     delete (numbers);
     return primes[n - 1];
 
+}*/
+
+unsigned long long nPrime(unsigned n) {
+    int a = 2;
+    int numb = 1;
+    if (n == 1) { return 2; }
+    while (numb < n) {
+        a++;
+        if (checkPrime(a)) {
+            numb++;
+        }
+        a++;
+    }
+    return --a;
 }
 
 unsigned long long nextPrime(unsigned long long value) {
