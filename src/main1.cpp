@@ -14,5 +14,5 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     unsigned long value;
     value = findValue(1,20);
-    cout<<"The minimum number is "<<value<<endl;
+    cout<<value<<endl;
 }
