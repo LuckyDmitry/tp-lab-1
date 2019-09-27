@@ -14,11 +14,12 @@ unsigned long long nPrime(unsigned n){
 	auto index = 0U;
 	while(true){
 		if (checkPrime(i)){
-			index++;
 			if (index == n){
 				return i;
 			}
+			index++;
 		}
+		i++;
 	}
 }
 unsigned long long nextPrime(unsigned long long value){
