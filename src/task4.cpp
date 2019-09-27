@@ -59,13 +59,8 @@ char *sum(char *x, char *y){
 		ires--;
 	}
 	if (inc == 1){
-<<<<<<< HEAD
 		*(ires) = '1';
 	{
-=======
-		*(ires) = 1;
-	
->>>>>>> 44520c5ab17219adef231a60c09e2dd6c936efb9
 	else{
 		result=result+1;
 	}
