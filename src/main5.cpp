@@ -4,4 +4,5 @@ int main(){
 	int n = 0;
 	char *buf = "df gs df g";
 	split(&res,&n,buf,' ');
+	return 0;
 }

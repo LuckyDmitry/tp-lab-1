@@ -55,6 +55,7 @@ char *sum(char *x, char *y){
 		j--;
 		ires--;
 	}
+	*(result+sizeres)='\0';
 	if (inc == 1){
 		*(ires) = '1';
 	}
