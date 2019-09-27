@@ -57,7 +57,7 @@ char *sum(char *x, char *y){
 	}
 	if (inc == 1){
 		*(ires) = '1';
-	{
+	}
 	else{
 		result=result+1;
 	}
