@@ -36,7 +36,7 @@ void split(char ***result, int *N, char *buf, char ch) {
 		it++;
 	}
 	if (empty) {
-		*(part + part_i) = '/0';
+		*(part + part_i) = '\0';
 		*(*(result)+n) = (char*)malloc(1000);
 		strcpy(*(*(result)+n), part);
 	}
