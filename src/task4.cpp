@@ -1,9 +1,6 @@
 #include "task4.h"
-char * sum(char *x, char *y){
-	#include <stdlib.h>
-int main(){
-	char *x = "312\0";
-	char *y = "12\0";
+#include <stdio.h>
+char *sum(char *x, char *y){
 	if (!x || !y){
 		return 0;
 	}
@@ -35,13 +32,13 @@ int main(){
 	int s = 0;
 	while (i != x-1 && j != y-1){
 		s = (*(i)-'0') + (*(j)-'0');
-		if (s >= 10){
-			s -= 10;
-			inc = 1;
-		}
 		if (inc == 1){
 			inc = 0;
 			s += 1;
+		}
+		if (s >= 10){
+			s -= 10;
+			inc = 1;
 		}
 		*(ires) = s + '0';
 		i--;
@@ -59,6 +56,10 @@ int main(){
 		ires--;
 	}
 	if (inc == 1){
-		*(ires) = 1;
+		*(ires) = '1';
+	{
+	else{
+		result=result+1;
 	}
+	return result;
 }
