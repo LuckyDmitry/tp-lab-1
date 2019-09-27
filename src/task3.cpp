@@ -4,8 +4,12 @@ unsigned long long sumPrime(unsigned int hbound){
 	auto sum = 0ULL;
 	unsigned int cPrime = 0;
 	while (true){
-		if ((cPrime = nextPrime(cPrime))< hbound){
+		cPrime = nextPrime(cPrime);
+		if (cPrime < hbound){
 			sum+=cPrime;
+		}
+		else{
+			break;
 		}
 	}
 	return sum;
