@@ -1,5 +1,5 @@
 #include "task4.h"
-#include <stdio.h>
+#include <stdlib.h>
 char *sum(char *x, char *y){
 	if (!x || !y){
 		return 0;
