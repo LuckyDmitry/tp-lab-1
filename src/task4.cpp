@@ -1,9 +1,5 @@
 #include "task4.h"
-char * sum(char *x, char *y){
-	#include <stdlib.h>
-int main(){
-	char *x = "312\0";
-	char *y = "12\0";
+char *sum(char *x, char *y){
 	if (!x || !y){
 		return 0;
 	}
@@ -60,5 +56,9 @@ int main(){
 	}
 	if (inc == 1){
 		*(ires) = 1;
+	
+	else{
+		result=result+1;
 	}
+	return result;
 }
