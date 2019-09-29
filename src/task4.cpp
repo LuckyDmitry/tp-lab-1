@@ -51,5 +51,16 @@ char * sum(char *x, char *y) {
 			numy--;
 		}
 	}
-	return ret;
+	char * sup = ret, *newret;
+	max++;
+	while (*ret == '0') {
+		max--;
+		ret += 1;
+	}
+	newret = new char[max];
+	for (int l = 0; l < max; l++) {
+		newret[l] = *(ret + l);
+	}
+	delete sup;
+	return newret;
 }
