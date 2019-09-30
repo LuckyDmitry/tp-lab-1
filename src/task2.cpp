@@ -4,15 +4,13 @@ using namespace std;
 bool checkPrime(unsigned int value)  // проверка числа на простоту.
 {
 	if (value == 1) return false;
-	int flag = 1;
 	for (unsigned int i = 2; i < sqrt(value)+1; i++)
 	{
 		if (value%i == 0 && value!=i) {
-			flag = 0;
+			return false;
 		}
 	}
-	 if (flag == 1) return true;
-	else return false;
+	return true;
 }
 unsigned long long nPrime(unsigned n) // нахождение n - ого простого числа(в ряду).
 {
