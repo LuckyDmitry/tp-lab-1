@@ -1,5 +1,6 @@
 #include <iostream>
-#include <string>
+#include <string.h>
+#include <malloc.h>
 #include <algorithm>
 #include "task4.h"
 
