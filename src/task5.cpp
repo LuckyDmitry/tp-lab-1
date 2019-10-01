@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 using namespace std;
 void split(char ***result, int *N, char *buf, char ch)
 {
@@ -12,8 +13,7 @@ void split(char ***result, int *N, char *buf, char ch)
 	(*N)++;
 	q = 0;
 	*result = new char*[*N];
-	int l = strlen(buf);
-	char *s = new char[l];
+	char *s = new char[strlen(buf)];
 	for (int j = 0; j <= strlen(buf); j++)
 	{
 		if ((buf[j] != ch) && (buf[j] != '\0'))
@@ -27,7 +27,7 @@ void split(char ***result, int *N, char *buf, char ch)
 			*(*result + q) = s;
 			q++;
 			k = 0;
-			s = new char[l];
+			s = new char[strlen(buf)];
 		}
 	}
 }
