@@ -2,7 +2,7 @@
 
 bool checkPrime(unsigned int value) {
     int check = 0;
-    for (int i = 2; i*i < value; i++) {
+    for (int i = 2; i*i <= value; i++) {
         if (value % i == 0) {
             check = 1;
             break;
@@ -30,10 +30,10 @@ unsigned long long nPrime(unsigned int n) {
 unsigned long long nextPrime(unsigned long long value) {
     unsigned long long num = value;
     while (true) {
-        value++;
+        num++;
         if (checkPrime(num)) {
             break;
         }
     }
-    return value;
+    return num;
 }
