@@ -1,9 +1,9 @@
 #include "task2.h"
-#include <Math.h>
+
 
 bool checkPrime(unsigned int value)
 {
-	for (unsigned int i = 2; i <= sqrt(value); i++)
+	for (unsigned int i = 2; i <= value-1; i++)
 	{
 		if (value%i == 0)
 		{
