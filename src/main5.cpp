@@ -5,10 +5,10 @@ using namespace std;
 
 int main()
 {
-	char** result;
+	char buf[] = "123,456,789";
 	int N = 0;
-	char buf[] = "991:992:993:994:995:996";
-	split(&result, &N, buf, ':');
+	char** result = nullptr;
+	split(&result, &N, buf, ',');
 	cout << N << endl;
 	for (int i = 0; i < N; i++) {
 		cout <<result[i] <<endl;
