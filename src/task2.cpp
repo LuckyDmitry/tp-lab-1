@@ -14,14 +14,14 @@ bool checkPrime(unsigned int value) {
 }
 
 unsigned long long nPrime(unsigned n) {
-	unsigned long long i = 2;
+	unsigned long long i = 1;
 	while (n > 0) {
+                i++;
 		if (checkPrime(i)) {
 			n--;
 		}
-		i++;
 	}
-	return i - 1;
+	return i;
 }
 
 unsigned long long nextPrime(unsigned long long value) {
