@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "task4.h"
-#include "Math.h"
+#include <Math.h>
 #include <string.h>
 #include <algorithm>
 
