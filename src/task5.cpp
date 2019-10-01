@@ -23,4 +23,5 @@ void split(char*** result, int* N, char* buf, char ch)
 			n++;
 		}
 	}
+	tmp[i] = '\0';
 }
