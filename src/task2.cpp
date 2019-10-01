@@ -5,7 +5,7 @@ bool checkPrime(unsigned int value)
 	bool fl = 1;
 	if (value < 2)
 		fl = 0;
-	for (unsigned int i = 2; i*i< value; i++)
+	for (unsigned int i = 2; i*i<= value; i++)
 	{
 		if (value % i == 0) 
 			fl = 0;
