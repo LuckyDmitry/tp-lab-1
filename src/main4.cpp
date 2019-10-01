@@ -3,8 +3,8 @@
 
 
 int main() {
-	char x[] = "13423";
-	char y[] = "32219";
+	char *x = (char*)"123";
+	char *y = (char*)"123";
 	char *r = sum(x, y);
 	std::cout << r;
 	return 0;
