@@ -5,10 +5,7 @@ bool checkPrime(unsigned int value) {
 	if (value <= 0 || value == 1) {
 		return false;
 	}
-	if (value == 2) {
-		return true;
-	}
-	for (i = 2; i < value - 1; i++) {
+	for (i = 2; i < sqrt(value) + 1; i++) {
 		if (value % i == 0) {
 			return false;
 		}
