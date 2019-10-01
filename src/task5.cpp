@@ -18,7 +18,7 @@ void split(char ***result, int *N, char *buf, char ch) {
 			num++;
 		}*/
 		num = 3;
-		i = 3;
+		i += 3;
 		*(*result + j) = new char[num + 1];
 		*(*(*result + j)+num) = '\0';
 		for (int k = 0; k < num; k++) {
