@@ -18,7 +18,7 @@ void split(char ***result, int *N, char *buf, char ch) {
     while (*(buf + pos) != '\0') {
         if (*(buf + pos) == ch) {
             *(*(result) + temp) = (char*) malloc ((pos - prevpos + 1) * sizeof(char));
-            *(*(*(result) + temp) + (pos - prevpos + 1)) = '\0';
+            *(*(*(result) + temp) + ((pos - prevpos) + 1)) = '\0';
             for (int i = 0; (prevpos + i) < pos; i++) {
                *(*(*(result) + temp) + i) = *(buf + prevpos + i);
             }
@@ -29,7 +29,7 @@ void split(char ***result, int *N, char *buf, char ch) {
         pos++;
     }
     *(*(result) + temp) = (char*) malloc (((pos - prevpos) + 1) * sizeof(char));
-    *(*(*(result) + temp) + (pos - prevpos + 1)) = '\0';
+    *(*(*(result) + temp) + ((pos - prevpos) + 1)) = '\0';
     for (int i = 0; (prevpos + i) < pos; i++) {
         *(*(*(result) + temp) + i) = *(buf + prevpos + i);
     }
