@@ -17,6 +17,12 @@ int reverse(char *x){
     return len;
 }
 char * sum(char *x, char *y){
+    int i = 0;
+    while (*(x + i) == '0')i ++;
+    x = x + i;
+    i = 0;
+    while (*(y + i) == '0') i ++;
+    y = y + i;
     int lenx = reverse(x), leny = reverse(y);
     int max;
     if (lenx > leny) max = lenx;
@@ -31,8 +37,7 @@ char * sum(char *x, char *y){
     }
     if (c != 0){
         *(x + max) = c + '0';}
-
-
+    *(x + max + 1) = 0;
     reverse(x);
     return x;
 }

@@ -10,8 +10,6 @@ int main() {
      gets(str1);
      gets(str2);
      char* ans = sum(str1, str2);
-     for (int i = 0; ((ans[i] >= '0')&&(ans[i] <= '9')); i ++){
-         cout << ans[i];
-     }
+     cout << ans;
     return 0;
 }
