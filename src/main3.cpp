@@ -8,10 +8,8 @@
 
 int main()
 {
-	unsigned int hbound;
-	std::cout << "Input hbound:";
-	std::cin >> hbound;
-	std::cout << "sumPrime=" << sumPrime(hbound);
+
+	std::cout << "sumPrime=" << sumPrime(2000000);
 
 
 	return 0;

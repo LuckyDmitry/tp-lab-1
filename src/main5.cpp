@@ -7,9 +7,9 @@ int main()
 {
 	int N = 0;
 	int i = 0;
-	char* buf = (char*)"AAA.BBB.CCC.DDD";
+	char* buf = (char*)"123,456,789";
 	char** result = nullptr;
-	split(&result, &N, buf, '.');
+	split(&result, &N, buf, ',');
 	for (i = 0; i < N; i++) {
 		std::cout << result[i] << "\n";
 	}
