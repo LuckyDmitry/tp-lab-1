@@ -1,15 +1,15 @@
 #include "task2.h"
 
 int main() {
-	unsigned  long long a = 0;
+	unsigned  long long res = 0;
 	bool flag = false;
-	flag = checkPrime(173);
+	flag = checkPrime(12);
 	std::cout << flag;
 	std::cout << "\n";
-	a = nPrime(8);
-	std::cout << a;
+	res = nPrime(2);
+	std::cout << res;
 	std::cout << "\n";
-	a = nextPrime(170);
-	std::cout << a;
+	res = nextPrime(2);
+	std::cout << res;
     return 0;
 }

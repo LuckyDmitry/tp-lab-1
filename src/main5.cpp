@@ -4,11 +4,11 @@
 
 
 int main() {
-	char *buf = (char*)"avsc/2weq/123";
+	char *buf = (char*)"123,456,789";
 	int N = 0, i = 0;
 	char **result = nullptr;
-	char ch = '/';
-	split(&result, &N, buf, ch);
+	split(&result, &N, buf, ',');
+	std::cout << N << "\n";
 	for (i = 0; i < N; i++) {
 		std::cout << result[i] << "\n";
 	}

@@ -5,7 +5,10 @@ bool checkPrime(unsigned int value) {
 	if (value <= 0 || value == 1) {
 		return false;
 	}
-	for (i = 2; i < sqrt(value) + 1; i++) {
+	if (value == 2) {
+		return true;
+	}
+	for (i = 2; i < value - 1; i++) {
 		if (value % i == 0) {
 			return false;
 		}
@@ -16,7 +19,7 @@ bool checkPrime(unsigned int value) {
 unsigned long long nPrime(unsigned n) {
 	unsigned long long i = 1;
 	while (n > 0) {
-                i++;
+		i++;
 		if (checkPrime(i)) {
 			n--;
 		}

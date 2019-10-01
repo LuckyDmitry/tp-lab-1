@@ -2,9 +2,6 @@
 #include "task2.h"
 
 int main() {
-	unsigned int hbound = 2000000;
-	unsigned long long i = 0;
-	i = sumPrime(hbound);
-	std::cout << i;
+	std::cout << sumPrime(10);
 	return 0;
 }
