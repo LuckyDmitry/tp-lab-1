@@ -20,7 +20,8 @@ char *sum(char *x, char *y) {
         m = len;
     }
 
-    char *str = new char[n];
+    char *str = new char[n+1];
+    str[n]=0;
     int i = 1;
     int rest = 0;
     while (m - i >= 0) {
@@ -40,7 +41,8 @@ char *sum(char *x, char *y) {
     }
 
     if (rest) {
-        char *newstr = new char[strlen(str) + 1];
+        char *newstr = new char[strlen(str) + 2];
+        newstr[strlen(str) + 1]=0;
         for (int i = 0; i < strlen(str); i++) {
             newstr[i + 1] = str[i];
         }

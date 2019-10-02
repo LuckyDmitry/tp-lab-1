@@ -5,8 +5,8 @@
 using namespace std;
 
 int main() {
-    char *x = "99";
-    char *y = "9";
+    char *x = "99999999999999999999";
+    char *y = "1";
     char *z = NULL;
     z = sum(x, y);
     int n = strlen(z);
