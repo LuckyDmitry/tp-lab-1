@@ -5,5 +5,4 @@
 #ifndef PO_TASK4_H
 #define PO_TASK4_H
 char * sum(char *x, char *y);
-int reverse(char *x);
 #endif //PO_TASK4_H

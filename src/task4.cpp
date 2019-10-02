@@ -1,44 +1,43 @@
-//
-// Created by Mary on 24.09.2019.
-//
 #include <iostream>
+#include <cstring>
 #include "task4.h"
 using namespace std;
-int reverse(char *x){
-    int len = 1;
-    while ((*(x + len) >= '0')&&(*(x + len) <= '9')){
-        len ++;
-    }
-    for (int i = 0; i < len/2; i ++){
-        char tmp = *(x + i);
-        *(x + i) = *(x + len - i - 1);
-        *(x + len - i - 1) = tmp;
-    }
-    return len;
-}
 char * sum(char *x, char *y){
-    int i = 0;
-    while (*(x + i) == '0')i ++;
-    x = x + i;
-    i = 0;
-    while (*(y + i) == '0') i ++;
-    y = y + i;
-    int lenx = reverse(x), leny = reverse(y);
-    int max;
-    if (lenx > leny) max = lenx;
-    else max = leny;
-    int c = 0;
-    for (int i = 0; i < max; i ++){
-        if ((*(y + i) < '0')||(*(y + i) > '9')) *(y + i) = '0';
-        if ((*(x + i) < '0')||(*(x + i) > '9')) *(x + i) = '0';
-        c = c + (*(x + i)-'0') + (*(y + i)-'0');
-        *(x + i) = '0' + (c % 10);
-        c /= 10;
+    int lenx = strlen(x);
+    int leny = strlen(y);
+    if (leny > lenx){
+        int tmp = lenx;
+        lenx = leny;
+        leny = tmp;
+        char *tmpp = x;
+        x = y;
+        y = tmpp;
     }
-    if (c != 0){
-        *(x + max) = c + '0';}
-    *(x + max + 1) = 0;
-    reverse(x);
-    return x;
+    char *res = new char[lenx + 1];
+    res[lenx] = 0;
+    int i = 0;
+    int remind = 0;
+    while (leny - i > 0){
+        int cur = x[leny - i - 1] - '0' + y[leny - i - 1] - '0' + remind;
+        res[i] = '0' + (cur % 10);
+        remind = cur / 10;
+        i++;
+    }
+    while (lenx - i > 0){
+        int cur = x[lenx - i - 1] - '0' + remind;
+        res[i] = '0' + (cur % 10);
+        remind = cur /10;
+        i ++;
+    }
+    if (remind){
+        res[i] = '0' + remind;
+        i++;
+    }
+    for (int j = 0; j < i/2; j ++){
+        char tmp = res[j];
+        res[j] = res[i - j - 1];
+        res[i - j - 1] = tmp;
+    }
+    res[i] = 0;
+    return res;
 }
-
