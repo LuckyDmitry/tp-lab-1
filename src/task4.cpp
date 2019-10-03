@@ -28,6 +28,8 @@ char *sum(char *x, char *y) {
 	}
 	result = (char*)malloc(sizeres + 2);
 	char* ires = result + sizeres + 1;
+	i = x + sizex-1;
+	j = y + sizey-1;
 	int inc = 0;
 	int s = 0;
 	while (i != x - 1 && j != y - 1) {
@@ -73,12 +75,12 @@ char *sum(char *x, char *y) {
 		j--;
 		ires--;
 	}
-	*(result + sizeres + 1) = '\0';
+	*(result + sizeres + 2) = '\0';
 	if (inc == 1) {
 		*(ires) = '1';
 	}
 	else {
-		result = result + 1;
+		ires = ires + 1;
 	}
-	return result;
+	return ires;
 }
