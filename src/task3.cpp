@@ -12,5 +12,5 @@ unsigned long long sumPrime(unsigned int hbound){
 			break;
 		}
 	}
-	return sum+1;
+	return sum-1;
 }
