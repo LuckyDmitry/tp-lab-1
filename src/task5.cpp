@@ -5,7 +5,6 @@ void split(char ***result, int *N, char *buf, char ch) {
 	char *it = buf;
 	char *part = (char*)malloc(1000*sizeof(char));
 	int y = 0;
-	N = (int*)malloc(sizeof(int));
 	int nn = 0;
 	while (*(it) != '\0') {
 		if (*(it) == ch) {
