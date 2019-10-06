@@ -3,12 +3,12 @@
 //
 
 #include "task4.h"
-#include <string>
+#include <string.h>
 
 
 using namespace std;
 
-char *sum(char *x, char *y) {
+char* sum(char *x, char *y) {
     int lenx = strlen(x);
     int leny = strlen(y);
     int max = leny;
