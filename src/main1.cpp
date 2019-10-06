@@ -8,6 +8,6 @@
 
 int main()
 {
-	std::cout << "Value=" << findValue(1, 10);
+	std::cout << "" << findValue(1, 10);
     return 0;
 }

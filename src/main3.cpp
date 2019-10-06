@@ -2,14 +2,13 @@
 #include <iostream>
 #include <stdlib.h>
 #include "task3.h"
-#include "task2.h"
 
 
 
 int main()
 {
 
-	std::cout << "sumPrime=" << sumPrime(2000000);
+	std::cout << "" << sumPrime(10);
 
 
 	return 0;

@@ -8,7 +8,7 @@ int main()
 {
 	char s1[] = "99999999999999999999";
 	char s2[] = "1";
-	std::cout << " "<<sum(s1,s2);
+	std::cout << ""<<sum(s1,s2);
 
 	return 0;
 }

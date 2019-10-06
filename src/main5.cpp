@@ -2,6 +2,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include "task5.h"
+using namespace std;
 
 int main()
 {
