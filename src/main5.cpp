@@ -1,10 +1,8 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include "task5.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>
 #include <string.h>
-
+#include "task5.h"
 using namespace std;
 
 int main() {
