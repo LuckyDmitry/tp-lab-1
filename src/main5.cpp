@@ -11,8 +11,9 @@ int main()
 	char* buf = (char*)"123,456,789";
 	char** result = nullptr;
 	split(&result, &N, buf, ',');
-	for (i = 0; i < N; i++) {
-		std::cout << result[i] << "\n";
-	}
+	//for (i = 0; i < N; i++) {
+	//	std::cout << result[i] << "\n";
+	//}
+	cout << result[2] << endl;
 	return 0;
 }

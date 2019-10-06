@@ -6,7 +6,7 @@
 #include "task5.h"
 
 
-void split(char*** result, int* N, char* buf, char ch)
+void split(char ***result, int *N, char *buf, char ch)
 {
 	int i = 0,j=0,k=0;
 	unsigned long int buflen = strlen(buf);

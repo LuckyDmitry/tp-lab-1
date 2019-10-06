@@ -7,7 +7,7 @@
 #include "task4.h"
 
 
-char* sum(char* x, char* y)
+char* sum(char *x, char *y)
 {
 	int msum = 0;
 	unsigned long int maxlen;
