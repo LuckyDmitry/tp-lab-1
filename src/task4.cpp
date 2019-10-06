@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include "task4.h"
+#include <string.h>
 using namespace std;
 
 char * sum(char *x, char *y) {
