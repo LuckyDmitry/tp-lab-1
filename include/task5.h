@@ -1,4 +1,4 @@
-#ifndef TASK4_H
-#define TASK4_H
+#ifndef TASK5_H
+#define TASK5_H
 void split(char ***result, int *N, char *buf, char ch);
-#endif //!TASK4_H
+#endif //!TASK5_H
