@@ -12,10 +12,10 @@ int gcd(int a, int b) {
 	return a;
 }
 unsigned long findValue(unsigned int min, unsigned max) {
-	int nok = 1;
+	int nok = min;
 	for (int i = min; i < max; i++){
-		int nod = gcd(nok, i + 1);
-		nok = nok * (i + 1) / nod;
+        //int nod = gcd(nok, i + 1);
+        nok = (nok * i) / gcd(nok, i);
 	}
 	return nok;
 }
