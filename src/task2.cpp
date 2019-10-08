@@ -28,7 +28,7 @@ unsigned long long nPrime(unsigned n)
 
 unsigned long long nextPrime(unsigned long long value)
 {
-	for (auto i = value;; i++) {
+	for (auto i = value+1;; i++) {
 		if (checkPrime(i)) {
 			return  i;
 		}
