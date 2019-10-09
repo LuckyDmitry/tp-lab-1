@@ -21,12 +21,12 @@ using namespace std;
             flag = true;
             for(int i = 3; i <= sqrt(curr); i += 2)
                 if(curr % i == 0) {
-                    flag = flag;
+                    flag = false;
                     break;
                 }
-            if (flag == true)
+            if (flag)
                 sum += curr;
             curr += 2;
         }
         return sum;
-} 
+}
