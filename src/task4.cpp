@@ -12,6 +12,7 @@
 #include <string>
 #include <stdio.h>
 #include <string.h>
+#include <algorithm>
 using namespace std;
 
 char* sum(char* x, char* y) {
