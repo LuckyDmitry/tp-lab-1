@@ -18,15 +18,15 @@ void split(char ***result, int *N, char *buf, char ch)
 	{
 		if ((buf[j] != ch) && (buf[j] != '\0'))
 		{
-			*(s + k) = buf[j];
+			s[k]= buf[j];
 			k++;
 		}
 		if ((buf[j] == ch) || (buf[j] == '\0'))
 		{
-			*(s + k) = '\0';
-			*(*result + q) = s;
+			s[k] = '\0';
+			(*result)[q] = s;
 			q++;
-			k = 0;
+			k = '\0';
 			s = new char[strlen(buf)];
 		}
 	}
