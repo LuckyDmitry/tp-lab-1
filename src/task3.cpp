@@ -12,21 +12,14 @@
 using namespace std;
 
  unsigned long long sumPrime(unsigned int hbound){
-        unsigned curr = 3;
+        unsigned int curr = 3;
         unsigned long long sum = 2;
-        bool flag;
         if(hbound < 2)
             return 0;
         while (curr < hbound){
-            flag = true;
-            for(int i = 3; i <= sqrt(curr); i += 2)
-                if(curr % i == 0) {
-                    flag = false;
-                    break;
-                }
-            if (flag)
+            if (checkPrime(curr))
                 sum += curr;
             curr += 2;
         }
         return sum;
-}
+} 

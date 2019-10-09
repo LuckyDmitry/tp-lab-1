@@ -7,9 +7,12 @@
 //
 
 #include "task2.h"
+#include <cmath>
 
 bool checkPrime(unsigned int value) {
-    for (int i = value - 1; i >= 2; i--) {
+    if (value == 1)
+        return false;
+    for (int i = 3; i <= sqrt(value); i += 2) {
         if (value % i == 0) {
             return false;
         }
