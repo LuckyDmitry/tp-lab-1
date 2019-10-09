@@ -14,7 +14,6 @@ unsigned long long sumPrime(unsigned int hbound) {
     unsigned long long sum = 0, numPrime = 0;
     while (numPrime < hbound) {
         sum += numPrime;
-        cout << numPrime << endl;
         numPrime = nextPrime(numPrime);
     }
     return sum;
