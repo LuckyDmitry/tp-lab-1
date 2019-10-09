@@ -11,6 +11,7 @@
 #include <cstdlib>
 #include <string>
 #include <stdio.h>
+#include <string.h>
 using namespace std;
 
 char* sum(char* x, char* y) {
