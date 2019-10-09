@@ -11,6 +11,5 @@
 
 using namespace std;
 int main(int argc, const char * argv[]) {
-    cout << sumPrime(2000000) << endl;
-//    cout << nPrime(500) << endl;
+    return 1;
 }
