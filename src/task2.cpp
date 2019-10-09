@@ -10,7 +10,7 @@
 #include <cmath>
 
 bool checkPrime(unsigned int value) {
-    if (value == 1)
+    if (value % 2 == 0 || value == 1)
         return false;
     for (int i = 3; i <= sqrt(value); i += 2) {
         if (value % i == 0) {
@@ -21,12 +21,16 @@ bool checkPrime(unsigned int value) {
 }
 
 unsigned long long nPrime(unsigned n) {
-    int i = 0;
+    if (n == 1)
+        return 2;
+    if (n == 2)
+        return 3;
+    int i = 2;
     unsigned long long num = 1;
     while (i != n) {
-        num++;
         if (checkPrime(num))
             i++;
+        num += 2;
     }
     return num;
 }
