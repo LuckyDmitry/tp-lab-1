@@ -18,13 +18,13 @@ using namespace std;
         if(hbound < 2)
             return 0;
         while (curr < hbound){
-            flag = false;
+            flag = true;
             for(int i = 3; i <= sqrt(curr); i += 2)
                 if(curr % i == 0) {
-                    flag = true;
+                    flag = flag;
                     break;
                 }
-            if (flag == false)
+            if (flag == true)
                 sum += curr;
             curr += 2;
         }
