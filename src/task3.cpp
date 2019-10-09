@@ -6,15 +6,27 @@
 //  Copyright © 2019 Андрей Журавлев. All rights reserved.
 //
 
-#include "task3.h"
 #include <iostream>
+#include "task3.h"
+#include "math.h"
 using namespace std;
 
-unsigned long long sumPrime(unsigned int hbound) {
-    unsigned long long sum = 0, numPrime = 0;
-    while (numPrime < hbound) {
-        sum += numPrime;
-        numPrime = nextPrime(numPrime);
-    }
-    return sum;
-}
+ unsigned long long sumPrime(unsigned int hbound){
+        unsigned curr = 3;
+        unsigned long long sum = 2;
+        bool flag;
+        if(hbound < 2)
+            return 0;
+        while (curr < hbound){
+            flag = false;
+            for(int i = 3; i <= sqrt(curr); i += 2)
+                if(curr % i == 0) {
+                    flag = true;
+                    break;
+                }
+            if (flag == false)
+                sum += curr;
+            curr += 2;
+        }
+        return sum;
+} 
