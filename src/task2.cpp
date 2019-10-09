@@ -1,11 +1,12 @@
 #include "task2.h"
+#include <math.h>
 
 bool checkPrime(unsigned int value)
 {
 	if (value == 1) {
 		return false;
 	}
-	for (auto i = 2; i < value; i++) {
+	for (auto i = 2; i <= sqrt(value); i++) {
 		if (!(value % i)) {
 			return false;
 		}

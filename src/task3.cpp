@@ -3,11 +3,11 @@
 
 unsigned long long sumPrime(unsigned int hbound)
 {
-	auto cnt = 0;
-	auto i = 1;
-	while (nPrime(i) < hbound) {
-		cnt += nPrime(i);
-		i++;
+	unsigned long long cnt = 0;
+	auto j = nextPrime(1);
+	while (j <= hbound) {
+		cnt += j;
+		j = nextPrime(j);
 	}
 	return cnt;
 }
