@@ -6,11 +6,13 @@
 //
 char * sum(char *x, char *y){
     int mind = 0;
+
     int lenX = strlen(x);
     int lenY = strlen(y);
 
     int lenR = std::max(lenX, lenY);
     char *result = new char[lenR + 2];
+    result[lenR + 1] = '\0';
 
     while (true)
     {
@@ -39,4 +41,6 @@ char * sum(char *x, char *y){
         result++;
     return result;
 }
+
+
 

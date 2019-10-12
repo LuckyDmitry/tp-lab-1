@@ -20,17 +20,20 @@ void split(char ***result, int *N, char *buf, char ch){
     int startIndex = 0;
     int counter = 0;
     for (int i = 0; i < strlen(buf); i++) {
+
         if (*(buf + i) == ch) {
-            char *sub = (char *) malloc((strlen(buf) + 1) * sizeof(char));
+            char* sub = (char *) malloc((i - startIndex) * sizeof(char));
             strncpy(sub, buf + startIndex, i - startIndex);
-            sub[i - startIndex + 2] = '\0';
+            *(sub + (i - startIndex)) = '\0';
+
             *(*result + counter++) = sub;
             startIndex = i + 1;
         }
     }
 
-    char *sub = (char *) malloc((strlen(buf) + 1) * sizeof(char));
+    char *sub = (char *) malloc((strlen(buf) - startIndex) * sizeof(char));
     strncpy(sub, buf + startIndex, strlen(buf) - startIndex);
+    *(sub + (strlen(buf) - startIndex)) = '\0';
     *(*result + counter) = sub;
 
 }
