@@ -34,7 +34,7 @@ char * sum(char *x, char *y) {
     while (i!=len) {
         a = strX[i];
         b = strY[i];
-        num =  atoi(a.c_str()) + atoi(b.c_str()) + add_num;
+        num =  (int)atoi(a.c_str()) + (int)atoi(b.c_str()) + add_num;
         num1 = num % 10;
         add_num = num / 10;
         *(res +len- i) = num1 + '0';
@@ -42,12 +42,12 @@ char * sum(char *x, char *y) {
     }
     if (!check) {
         a = strX[i];
-        num = atoi(a.c_str()) + add_num;
+        num = (int)atoi(a.c_str()) + add_num;
         *res = num + '0';
     }
     else {
         b = strY[i];
-        num = atoi(b.c_str()) + add_num;
+        num = (int)atoi(b.c_str()) + add_num;
         *res = num + '0';
     }
 
