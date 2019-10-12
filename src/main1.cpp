@@ -11,8 +11,13 @@
 
 using namespace std;
 
+//Написать программу, определяющую, какое самое маленькое положительное целое
+//число делится на все числа из диапазона [1...20] без остатка.
+
 int main(int argc, const char * argv[]) {
     unsigned long value;
-    value = findValue(1,20);
+    int min, max;
+    cin>>min>>max;
+    value = findValue(min,max);
     cout<<value<<endl;
 }
