@@ -11,6 +11,6 @@ using namespace std;
 int main(int argc, const char * argv[])
 {
     unsigned int value = findValue(1, 20);
-    print("%d", value)
+    printf("%d", value);
     return 0;
 }

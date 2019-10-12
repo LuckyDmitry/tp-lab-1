@@ -10,11 +10,18 @@
 unsigned long findValue(unsigned int min,unsigned max)
 {
     unsigned int current = max;
-    for (int i = min; i <= max; i++)
+    bool status = true;
+    while (status)
     {
-        while (current % i !=0)
+        current += max;
+        for (int i = min; i <= max; i++)
         {
-            current += max;
+            if (current % i !=0)
+            {
+                status = true;
+                break;
+            }
+            status = false;
         }
     }
     return current;
