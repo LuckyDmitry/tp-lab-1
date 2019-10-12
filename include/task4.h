@@ -6,9 +6,9 @@
 //  Copyright © 2019 Olesia Martinyuk. All rights reserved.
 //
 
-#ifndef task4_hpp
-#define task4_hpp
+#ifndef task4_h
+#define task4_h
 
 #include <stdio.h>
-
+char * sum(char *x, char *y);
 #endif /* task4_hpp */

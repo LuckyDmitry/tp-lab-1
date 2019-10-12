@@ -6,9 +6,9 @@
 //  Copyright © 2019 Olesia Martinyuk. All rights reserved.
 //
 
-#ifndef Task5_h
-#define Task5_h
+#ifndef task5_h
+#define task5_h
 
 #include <stdio.h>
-
+void split(char ***result, int *N, char *buf, char ch);
 #endif /* Task5_hpp */

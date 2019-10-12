@@ -6,4 +6,6 @@
 //  Copyright © 2019 Olesia Martinyuk. All rights reserved.
 //
 
-#include "Task5.h"
+#include "task5.h"
+
+void split(char ***result, int *N, char *buf, char ch){}
