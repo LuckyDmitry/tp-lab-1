@@ -13,18 +13,12 @@ using namespace std;
 
 //Написать прототип библиотеки для работы с простыми (prime) числами.
 
-int main(int argc, const char * argv[]) {
-    
-    int check_Number;
-    cin>>check_Number;
-    checkPrime(check_Number)?cout<<"true\n":cout<<"false\n";
-    
-    unsigned int index;
-    cin>>index;
-    cout<<nPrime(index)<<endl;
-    
-    unsigned long long nextPNumb;
-    cin>>nextPNumb;
-    cout<<nextPrime(nextPNumb)<<endl;
-    
+int main() {
+        cout << checkPrime(2) << endl;
+        cout << checkPrime(3) << endl;
+        cout << checkPrime(12) << endl;
+        cout << nPrime(6) << endl;
+        cout << nPrime(500) << endl;
+        cout << nextPrime(3559) << endl;
+        cout << nextPrime(3559) << endl;
  }

@@ -15,9 +15,6 @@ using namespace std;
 // Найти сумму всех простых чисел, меньше двух миллионов.
 
 int main(int argc, const char * argv[]) {
-    unsigned int hbound;
-    cin>>hbound;
-    unsigned long long sum = sumPrime(hbound);
-    cout<<sum<<endl;
+    cout << sumPrime(2000000)<< endl;
     
 }

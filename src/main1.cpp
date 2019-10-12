@@ -15,9 +15,6 @@ using namespace std;
 //число делится на все числа из диапазона [1...20] без остатка.
 
 int main(int argc, const char * argv[]) {
-    unsigned long value;
-    int min, max;
-    cin>>min>>max;
-    value = findValue(min,max);
-    cout<<value<<endl;
+    cout<<findValue(1,20)<<endl;
+    cout<<findValue(1,10)<<endl;
 }
