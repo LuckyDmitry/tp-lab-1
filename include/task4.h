@@ -9,6 +9,10 @@
 #ifndef task4_h
 #define task4_h
 
-#include <stdio.h>
+#include <iostream>
+#include <stdlib.h>
+#include <string>
+
 char * sum(char *x, char *y);
+
 #endif /* task4_hpp */

@@ -7,10 +7,15 @@
 //
 
 #include <iostream>
+#include <stdlib.h>
+#include <string>
 #include "task4.h"
 
+using namespace std;
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+    char *x="99999999999999999999";
+    char *y="1";
+    char *z=sum(x,y);
+    cout<<z<<endl;
 }
