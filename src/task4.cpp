@@ -1,6 +1,7 @@
 #include "task4.h"
 #include <iostream>
 #include <string>
+#include <cstring>
 #include <stdio.h>
 
 using namespace std;
@@ -32,4 +33,3 @@ char * sum(char *x, char *y) {
     }
     return strdup(res);
 }
-

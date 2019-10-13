@@ -10,7 +10,7 @@
 #define task4_h
 
 #include <iostream>
-#include <stdlib.h>
+#include <cstring>
 #include <string>
 
 char * sum(char *x, char *y);
