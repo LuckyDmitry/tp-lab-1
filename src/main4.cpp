@@ -6,11 +6,12 @@
 //  Copyright © 2019 Olesia Martinyuk. All rights reserved.
 //
 
+#include "task4.h"
 #include <iostream>
-#include <stdlib.h>
 #include <string>
 #include <cstring>
-#include "task4.h"
+#include <stdio.h>
+#include <algorithm>
 
 using namespace std;
 

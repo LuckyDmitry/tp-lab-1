@@ -1,8 +1,10 @@
 #include "task4.h"
+
 #include <iostream>
 #include <string>
 #include <cstring>
 #include <stdio.h>
+#include <algorithm>
 
 using namespace std;
 
