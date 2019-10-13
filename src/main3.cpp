@@ -5,7 +5,7 @@
 int main()
 {
 	unsigned int num;
-	sid::cin >> num;
+	std::cin >> num;
 	std::cout << sumPrime(num);
 	return 0;
 }

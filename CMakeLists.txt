@@ -5,7 +5,6 @@ set(PROJECT_NAME task1)
 project(${PROJECT_NAME})
 
 set(CMAKE_CXX_FLAGS "-g -Wall")
-
 # If you want your own include/ directory, set this, and then you can do
 # include_directories(${COMMON_INCLUDES}) in other CMakeLists.txt files.
 # set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/include)
@@ -25,7 +24,8 @@ set(SRC_FILES3 ${PROJECT_SOURCE_DIR}/src/task2.cpp
 set(SRC_FILES4 ${PROJECT_SOURCE_DIR}/src/task4.cpp)
 set(SRC_FILES5 ${PROJECT_SOURCE_DIR}/src/task5.cpp)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_library(task1_lib ${SRC_FILES1})
 add_library(task2_lib ${SRC_FILES2})
