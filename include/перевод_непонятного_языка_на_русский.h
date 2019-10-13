@@ -20,5 +20,6 @@
 #define свыв cout//стандартный вывод
 #define стд std
 #define нок lcm
+#define нулевуказ nullptr
 
 #endif /* перевод_непонятного_языка_на_русский_h */
