@@ -7,7 +7,7 @@
 //
 
 #include <iostream>
-#include "task1.hpp"
+#include "task1.h"
 #include <numeric>
 
 беззнаковый длинный findValue(беззнаковый целоч min, беззнаковый max)
