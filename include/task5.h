@@ -14,6 +14,6 @@
 #include <string>
 #include <vector>
 #include <sstream>
-#include "перевод_непонятного_языка_на_русский.h"
+#include "translation.h"
 пустой split(симв ***result, целоч *N, симв *buf, симв ch);
 #endif /* task5_hpp */

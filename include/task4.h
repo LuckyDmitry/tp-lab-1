@@ -12,6 +12,6 @@
 #include <stdio.h>
 #include <cstring>
 #include <string>
-#include "перевод_непонятного_языка_на_русский.h"
+#include "translation.h"
 симв * sum(симв * x, симв * y);
 #endif /* task4_hpp */

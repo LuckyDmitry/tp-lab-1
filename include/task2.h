@@ -10,7 +10,7 @@
 #define task2_hpp
 
 #include <stdio.h>
-#include "перевод_непонятного_языка_на_русский.h"
+#include "translation.h"
 бул checkPrime(беззнаковый длинный длинный value);
 беззнаковый длинный длинный nPrime(беззнаковый n);
 беззнаковый длинный длинный nextPrime(беззнаковый длинный длинный value);

@@ -6,8 +6,8 @@
 //  Copyright © 2019 Коля. All rights reserved.
 //
 
-#ifndef перевод_непонятного_языка_на_русский_h
-#define перевод_непонятного_языка_на_русский_h
+#ifndef translation_h
+#define translation_h
 
 #define целоч int
 #define главная main
@@ -50,4 +50,4 @@
 #define взятьстроку getline
 #define нулевуказ nullptr
 
-#endif /* перевод_непонятного_языка_на_русский_h */
+#endif /* translation_h */
