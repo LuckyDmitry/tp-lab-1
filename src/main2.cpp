@@ -6,6 +6,6 @@ int main()
 {
     unsigned int num;
     sid::cin >> num;
-    std::cout << checkPrime(num)<<"\n"<<nPrime(num)<<"\n"<<<<nextPrime(num);
+    std::cout << checkPrime(num)<<"\n"<<nPrime(num)<<"\n"<<nextPrime(num);
     return 0;
 }
