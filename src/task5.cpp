@@ -1,26 +1,26 @@
 //
 //  task5.cpp
-//  лабораторная работа
+//  lab
 //
 //  Created by Коля on 13/10/2019.
 //  Copyright © 2019 Коля. All rights reserved.
 //
 
-#include "task5.h"
+#include "task5.hpp"
 
 
-пустой split(симв ***result, целоч *N, симв *buf, симв ch)
+void split(char ***result, int *N, char *buf, char ch)
 {
     *N=1;
-    для (целоч i = 0; i < стрдлин(buf); i++)
-        если (*(buf + i) == ch)
+    for (int i = 0; i < strlen(buf); i++)
+        if (*(buf + i) == ch)
             (*N)++;
-    *result = (симв**) памназ((*N) * размер(симв*));
-    стд::строка слово;
-    стд::истрокпоток сс((стд::строка(buf)));
-    целоч счетчик=0;
-    пока (стд::взятьстроку(сс, слово, ch))
+    *result = (char**) malloc((*N) * sizeof(char*));
+    std::string word;
+    std::istringstream ss((std::string(buf)));
+    int counter=0;
+    while (std::getline(ss, word, ch))
     {
-       *(*result + счетчик++) = стрдуп(слово.си_стр());
+       *(*result + counter++) = strdup(word.c_str());
     }
 }

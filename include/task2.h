@@ -1,6 +1,6 @@
 //
 //  task2.hpp
-//  лабораторная работа
+//  lab
 //
 //  Created by Коля on 29/09/2019.
 //  Copyright © 2019 Коля. All rights reserved.
@@ -10,8 +10,7 @@
 #define task2_hpp
 
 #include <stdio.h>
-#include "translation.h"
-бул checkPrime(беззнаковый длинный длинный value);
-беззнаковый длинный длинный nPrime(беззнаковый n);
-беззнаковый длинный длинный nextPrime(беззнаковый длинный длинный value);
+bool checkPrime(unsigned long long value);
+unsigned long long nPrime(unsigned n);
+unsigned long long nextPrime(unsigned long long value);
 #endif /* task2_hpp */

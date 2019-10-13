@@ -1,12 +1,11 @@
-#include "перевод_непонятного_языка_на_русский.h"
 #include "task3.h"
 #include <iostream>
 
 
-целоч главная()
+int main()
 {
-    беззнаковый целоч число;
-    стд::сввод >> число;
-    стд::свыв << sumPrime(число);
-    возврат 0;
+	unsigned int num;
+	sid::cin >> num;
+	std::cout << sumPrime(num);
+	return 0;
 }

@@ -1,41 +1,41 @@
 //
 //  task2.cpp
-//  лабораторная работа
+//  lab
 //
 //  Created by Коля on 29/09/2019.
 //  Copyright © 2019 Коля. All rights reserved.
 //
 
-#include "task2.h"
+#include "task2.hpp"
 
-бул checkPrime(беззнаковый длинный длинный value)
+bool checkPrime(unsigned long long value)
 {
-    если (value < 2)
-        возврат 0;
-    для (беззнаковый длинный длинный и = 2; и*и <= value; и++)
-        если (value%и==0)
-            возврат 0;
-    возврат 1;
+    if (value < 2)
+        return 0;
+    for (unsigned long long i = 2; i*i <= value; i++)
+        if (value%i==0)
+            return 0;
+    return 1;
 }
 
-беззнаковый длинный длинный nPrime(беззнаковый n)
+unsigned long long nPrime(unsigned n)
 {
-    беззнаковый длинный длинный значение = 0;
-    для (беззнаковый длинный длинный и = 2; n!=0; и++)
+    unsigned long long value = 0;
+    for (unsigned long long i = 2; n!=0; i++)
      {
-         если (checkPrime(и))
+         if (checkPrime(i))
          {
              n--;
-             значение = и;
+             value = i;
          }
      }
-     возврат значение;
+     return value;
 }
 
-беззнаковый длинный длинный nextPrime(беззнаковый длинный длинный value)
+unsigned long long nextPrime(unsigned long long value)
 {
-    делать
+    do
         value++;
-    пока (!checkPrime(value));
-    возврат value;
+    while (!checkPrime(value));
+    return value;
 }

@@ -1,6 +1,6 @@
 //
 //  task5.hpp
-//  лабораторная работа
+//  lab
 //
 //  Created by Коля on 13/10/2019.
 //  Copyright © 2019 Коля. All rights reserved.
@@ -14,6 +14,5 @@
 #include <string>
 #include <vector>
 #include <sstream>
-#include "translation.h"
-пустой split(симв ***result, целоч *N, симв *buf, симв ch);
+void split(char ***result, int *N, char *buf, char ch);
 #endif /* task5_hpp */

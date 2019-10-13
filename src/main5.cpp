@@ -3,12 +3,12 @@
 #include <iostream>
 
 
-целоч главная()
+int main()
 {
-   	симв *буф="123,456,789";
-   	целоч Н=0;
-   	симв **результат=нулевуказ;
-   	split(&результат, &Н, буф, ',');
-   	стд::свыв << результат;
-    возврат 0;
+   	char *buf="123,456,789";
+   	int N=0;
+   	char **result=nullptr;
+   	split(&result, &N, buf, ',');
+   	std::cout<<result;
+    return 0;
 }

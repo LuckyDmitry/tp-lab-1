@@ -1,40 +1,40 @@
 //
 //  task3.cpp
-//  лабораторная работа
+//  lab
 //
 //  Created by Коля on 09/10/2019.
 //  Copyright © 2019 Коля. All rights reserved.
 //
 
-#include "task3.h"
-#include "task2.h"
+#include "task3.hpp"
+#include "task2.hpp"
+#include <thread>
 
 
-пустой реальнСуммаПростых (беззнаковый целоч вграница, стд::обещ<беззнаковый длинный длинный> && п, беззнаковый целоч старт)
+void realSumPrime (unsigned int hdbound, std::promise<unsigned long long> && p, unsigned int start)
 {
-    беззнаковый длинный длинный сум = 0;
-    для (беззнаковый целоч i = старт;i < вграница;i++)
+    unsigned long long sum = 0;
+    for (unsigned int i = start;i < hdbound;i++)
     {
-        если (checkPrime(i))
-            сум += i;
+        if (checkPrime(i))sum += i;
     }
-    п.задать_значение(сум);
+    p.set_value(sum);
 }
 
-беззнаковый длинный длинный sumPrime(беззнаковый целоч hbound)
+unsigned long long sumPrime(unsigned int hbound)
 {
-    целоч б = hbound/4;
-    стд::обещ <беззнаковый длинный длинный> отв1, отв2, отв3, отв4;
-    авто ф1 = отв1.взять_будущее(), ф2 = отв2.взять_будущее(), ф3 = отв3.взять_будущее(), ф4 = отв4.взять_будущее();
-    стд::поток п1 (&реальнСуммаПростых, б, стд::перемещ(отв1), 2);
-    стд::поток п2 (&реальнСуммаПростых, б+hbound/4, стд::перемещ(отв2), б);
-    б+=hbound/4;
-    стд::поток п3 (&реальнСуммаПростых, б+hbound/4, стд::перемещ(отв3), б);
-    б+=hbound/4;
-    стд::поток п4 (&реальнСуммаПростых, б+hbound/4, стд::перемещ(отв4), б);
-    п1.присоединить();
-    п2.присоединить();
-    п3.присоединить();
-    п4.присоединить();
-    возврат ф1.взять()+ф2.взять()+ф3.взять()+ф4.взять();
+    int b = hbound/4;
+    std::promise <unsigned long long> ans1, ans2, ans3, ans4;
+    auto f1 = ans1.get_future(), f2 = ans2.get_future(), f3 = ans3.get_future(), f4 = ans4.get_future();
+    std::thread t1 (&realSumPrime, b, std::move(ans1), 2);
+    std::thread t2 (&realSumPrime, b+hbound/4, std::move(ans2), b);
+    b+=hbound/4;
+    std::thread t3 (&realSumPrime, b+hbound/4, std::move(ans3), b);
+    b+=hbound/4;
+    std::thread t4 (&realSumPrime, b+hbound/4, std::move(ans4), b);
+    t1.join();
+    t2.join();
+    t3.join();
+    t4.join();
+    return f1.get()+f2.get()+f3.get()+f4.get();
 }

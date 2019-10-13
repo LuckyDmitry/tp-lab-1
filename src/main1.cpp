@@ -1,12 +1,11 @@
-#include "перевод_непонятного_языка_на_русский.h"
 #include "task1.h"
 #include <iostream>
 
 
-целоч главная()
+int main()
 {
-    беззнаковый целоч мин, макс;
-    стд::сввод >> мин >> макс;
-    стд::свыв << findValue(мин, макс);
-    возврат 0;
+    unsigned int min, max;
+    std::cin >> min >> max;
+    std::cout << findValue(min, max);
+    return 0;
 }

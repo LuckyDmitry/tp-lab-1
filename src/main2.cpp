@@ -1,12 +1,11 @@
-#include "перевод_непонятного_языка_на_русский.h"
 #include "task2.h"
 #include <iostream>
 
 
-целоч главная()
+int main()
 {
-    беззнаковый целоч число;
-    стд::сввод >> число;
-    стд::свыв << checkPrime(число)<<"\n"<<nPrime(число)<<"\n"<<<<nextPrime(число);
-    возврат 0;
+    unsigned int num;
+    sid::cin >> num;
+    std::cout << checkPrime(num)<<"\n"<<nPrime(num)<<"\n"<<<<nextPrime(num);
+    return 0;
 }
