@@ -6,7 +6,7 @@
 //  Copyright © 2019 Коля. All rights reserved.
 //
 
-#include "task5.hpp"
+#include "task5.h"
 
 
 void split(char ***result, int *N, char *buf, char ch)

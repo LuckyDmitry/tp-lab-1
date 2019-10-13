@@ -6,7 +6,7 @@
 //  Copyright © 2019 Коля. All rights reserved.
 //
 
-#include "task4.hpp"
+#include "task4.h"
 #include <cstring>
 #include <string>
 

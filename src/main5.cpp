@@ -1,4 +1,3 @@
-#include "перевод_непонятного_языка_на_русский.h"
 #include "task5.h"
 #include <iostream>
 

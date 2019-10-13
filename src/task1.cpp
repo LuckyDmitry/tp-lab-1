@@ -7,7 +7,7 @@
 //
 
 #include <iostream>
-#include "task1.hpp"
+#include "task1.h"
 
 
 unsigned long findValue(unsigned int min, unsigned max)

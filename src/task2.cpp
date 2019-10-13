@@ -6,7 +6,7 @@
 //  Copyright © 2019 Коля. All rights reserved.
 //
 
-#include "task2.hpp"
+#include "task2.h"
 
 bool checkPrime(unsigned long long value)
 {
