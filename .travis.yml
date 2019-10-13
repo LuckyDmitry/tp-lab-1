@@ -23,7 +23,7 @@ matrix:
            - gcc-9
            - g++-9
            #- gcov-4.9
-           - clang-8
+           - clang
            - valgrind
            # Misc
            - python-yaml
@@ -39,7 +39,7 @@ before_install:
     - export CXX_FLAGS=${CXX_FLAGS}" "${ENV_CXX_FLAGS}
 
 install:
-    - if [ "$CXX" = "clang++" ] && [ "$TRAVIS_OS_NAME" = "linux" ]; then export CXX="clang++-9.0" CC="clang-9.0"; fi
+    - if [ "$CXX" = "clang++" ] && [ "$TRAVIS_OS_NAME" = "linux" ]; then export CXX="clang++" CC="clang"; fi
     - echo ${PATH}
     - echo ${CXX}
     - ${CXX} --version
