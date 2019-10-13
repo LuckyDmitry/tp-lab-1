@@ -1,6 +1,6 @@
 #include "task1.h"
 
-_inline static unsigned long gcd(unsigned long A, unsigned long B)
+static unsigned long gcd(unsigned long A, unsigned long B)
 {
 	while (A != B)
 	{
@@ -16,7 +16,7 @@ _inline static unsigned long gcd(unsigned long A, unsigned long B)
 	return A;
 }
 
-_inline static unsigned long lcm(unsigned long A, unsigned long B)
+static unsigned long lcm(unsigned long A, unsigned long B)
 {
 	return (A * B) / gcd(A, B);
 }
