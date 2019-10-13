@@ -28,7 +28,6 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Threads REQUIRED)
-target_link_libraries(${CMAKE_PROJECT_NAME} Threads::Threads)
 
 add_library(task1_lib ${SRC_FILES1})
 add_library(task2_lib ${SRC_FILES2})
@@ -47,6 +46,7 @@ target_link_libraries(task2 task2_lib)
 target_link_libraries(task3 task3_lib)
 target_link_libraries(task4 task4_lib)
 target_link_libraries(task5 task5_lib)
+target_link_libraries(task3 Threads::Threads)
 
 ################################
 # Testing
