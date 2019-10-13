@@ -1,5 +1,5 @@
 #include "task5.h"
-#include <iostream>
+#include <cstring>
 
 void split(char*** result, int* N, char* buf, char ch)
 {
@@ -21,7 +21,7 @@ void split(char*** result, int* N, char* buf, char ch)
 		if (buf[i] == ch)
 		{
 			newBuf[i] = '\0';
-			if (i != strlen(buf))
+			if (i != strlen(buf)-1)
 			{
 				res[j] = &newBuf[i + 1];
 				j++;

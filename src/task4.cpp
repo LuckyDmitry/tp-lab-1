@@ -1,5 +1,5 @@
 #include "task4.h"
-#include <iostream>
+#include <cstring>
 char* sum(char* x, char* y)
 {
 	int lengx = strlen(x);
