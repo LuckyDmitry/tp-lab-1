@@ -1,5 +1,3 @@
-#include "task2.h"
-
 bool checkPrime(unsigned int value)
 {
 	bool fl = 1;
