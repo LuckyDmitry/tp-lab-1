@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 char * sum(char *x, char *y)
