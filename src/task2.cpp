@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include <stdio.h>
 
 bool checkPrime(unsigned int value)
 {
