@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include <stdio.h>
 #include <cstdlib>
 
 unsigned long long sumPrime(unsigned int hbound)
