@@ -1,5 +1,4 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include "task4.h"
 #include <string.h>
 #include <algorithm>
 #include <iostream>
@@ -52,8 +51,7 @@ char * sum(char *x, char *y)
 		{
 			sum[i] = sum[i + 1];
 		}
-		sum[len] = 0;
+		sum[len] = '\0';
 	}
 	return sum;
 }
-
