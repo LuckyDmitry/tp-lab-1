@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include <stdio.h>
 #include <iostream>
 #include "task3.h"
 
