@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string.h>
 using namespace std;
+
 void split(char ***result, int *N, char *buf, char ch)
 {
 	int num_str = 0, num_let = 0;
