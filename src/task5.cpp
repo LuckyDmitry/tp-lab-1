@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <string.h>
-#include <stdlib.h> 
+#include <cstdlib> 
 
 void split(char ***result, int *N, char *buf, char ch)
 {
