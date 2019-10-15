@@ -6,9 +6,9 @@
 char * sum(char *x, char *y)
 {
 	long int x1;
-	long int S;
-	long int Stemp;
 	long int y1;
+	long long int S;
+	long long int Stemp;
 	int k = 0;
 	x1 = atol(x);
 	y1 = atol(y);
@@ -22,7 +22,7 @@ char * sum(char *x, char *y)
 	}
 
 	char* sum = (char *)malloc(sizeof(char) * (k));
-	sprintf(sum, "%ld", S);
+	sprintf(sum, "%lld", S);
 
 	return(sum);
 } 
