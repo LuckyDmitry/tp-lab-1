@@ -2,9 +2,14 @@
 #include <cmath>
 
 bool checkPrime(unsigned long long value) {
-	for (unsigned long long i = 2; i <= sqrt(value) + 1; i++) {
-		if (value % i == 0) {
-			return 0;
+	if (value < 2) {
+		return 0;
+	}
+	if (value > 2) {
+		for (unsigned long long i = 2; i <= sqrt(value) + 1; i++) {
+			if (value % i == 0) {
+				return 0;
+			}
 		}
 	}
 	return 1;
