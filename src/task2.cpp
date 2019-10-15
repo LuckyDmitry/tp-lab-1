@@ -3,20 +3,16 @@
 
 bool checkPrime(unsigned int value)
 {
-	int k = 1;
-	int i = 2;
-
-	while ((k <= 2) && (i <= value))
-	{
-		if (value % i == 0)
-			k++;
-		i++;
-	}
-
-	if (k == 2)
-		return true;
-	else
+	if ((value <= 0) || (value == 1))
 		return false;
+	for (int i = 2; i < value; i++)
+	{
+	      if (value % i == 0)
+	      {
+		      return false;
+	      }
+	}
+	return true;
 }
 
 unsigned long long nPrime(unsigned n)
