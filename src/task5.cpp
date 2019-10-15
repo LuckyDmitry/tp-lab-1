@@ -3,12 +3,10 @@
 #include <cstdlib> 
 #include <cstddef>
 
-void split(char ***result, int *N, const char *buf, char ch)
+void split(char ***result, int *N, char *buf, char ch)
 {
 	const char *s = &ch;
 	int len;
-	char *buf1 = (char*)malloc(strlen(buf));
-	strcpy(buf1, buf);
 	int size = strlen(buf);
 
 	for (int i = 0; i < size; i++)
@@ -19,7 +17,7 @@ void split(char ***result, int *N, const char *buf, char ch)
 		}
 	}
 
-	char * pch = strtok(buf1, s); 
+	char * pch = strtok(buf, s); 
 
 	*result = (char**)malloc(sizeof(char*) * ((*N)+1));
 
