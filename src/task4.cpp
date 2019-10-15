@@ -1,5 +1,6 @@
 #include "task4.h"
-#include <string>
+#include <cstring>
+#include <cstdlib>
 
 char* sum(char* x, char* y) {
 	int symbolX = strlen(x) - 1, symbolY = strlen(y) - 1, symbolRes, lenOfRes = 1, remainder = 0;
