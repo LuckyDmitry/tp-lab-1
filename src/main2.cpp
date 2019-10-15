@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include <iostream>
 #include "task2.h"
+#include <iostream>
 
 int main()
 {
