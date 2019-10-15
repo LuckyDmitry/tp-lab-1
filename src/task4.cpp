@@ -20,7 +20,7 @@ char * sum(char *x, char *y)
 	}
 
 	char* sum = (char *)malloc(sizeof(char) * (k));
-	ltoa(S, sum, 10);
+	sprintf(sum, "%ld", S);
 
 	return(sum);
 } 
