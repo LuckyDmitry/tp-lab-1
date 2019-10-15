@@ -7,15 +7,18 @@ void split(char ***result, int *N, char *buf, char ch)
 {
 	*N = 1;
 	int len = strlen(buf);
-	for (int i = 0; i < len; i++){ //ïîäñ÷åò êîëè÷åñòâà ïîäñòðîê
+	for (int i = 0; i < len; i++)
+	{
 		if (*(buf + i) == ch)
 			*N += 1;
 	}
 	*result = (char**)malloc(*N * sizeof(char*));
 	int i = 0;
-	for (int j = 0; j < *N; j++){
+	for (int j = 0; j < *N; j++)
+	{
 		int lenstr = 0;
-		while ((*(buf + 1) != 0) && (*(buf + i) != ch)){
+		while ((*(buf + 1) != 0) && (*(buf + i) != ch))
+		{
 			i++;
 			lenstr++;
 		}
