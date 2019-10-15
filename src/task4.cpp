@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <cstdlib>
-#include <cstddef>
+#include <malloc.h>
 
 char * sum(const char *x, const char *y)
 {
