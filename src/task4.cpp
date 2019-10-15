@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <malloc.h>
 
-char * sum(const char *x, const char *y)
+char * sum(char *x, char *y)
 {
 	long int x1;
 	long int S;
