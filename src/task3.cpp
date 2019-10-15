@@ -2,7 +2,7 @@
 #include "task3.h"
 unsigned long long sumPrime(unsigned int hbound) {
 
-	unsigned int sum= 0;
+	unsigned long long sum= 0;
 	unsigned int pr = 2;
 
 	while (pr<=hbound) {
