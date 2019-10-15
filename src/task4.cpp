@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <cstdlib>
 
-char * sum(char *x, char *y)
+char * sum(const char *x, const char *y)
 {
 	long int x1;
 	long int S;
