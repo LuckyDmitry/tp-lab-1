@@ -1,10 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include <iostream>
 #include "task5.h"
+#include <iostream>
 
 int main()
 {
-	const char buf[] = "You are having very good time";
+	char buf[] = "You are having very good time";
 	int N = 0;
 	char **result = NULL;
 
