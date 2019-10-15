@@ -4,9 +4,9 @@
 
 int main()
 {
-	char x[] = { "123000" };
-	char y[] = { "456123" };
+	char x[] = "123000";
+	char y[] = "456123";
 
-	printf("\n%s", sum(x, y));
+	printf("%s", sum(x,y));
 	return 1;
 } 
