@@ -4,8 +4,8 @@
 
 int main()
 {
-	printf("\ncheckPrime=%lld", checkPrime(11));
-	printf("\nnPrime=%lld", nPrime(11));
-	printf("\nnextPrime=%lld", nextPrime(11));
+	printf("%d \n", checkPrime(11));
+	printf("%d \n", nPrime(11));
+	printf("%d \n", nextPrime(11));
 	return 1;
 } 
