@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
+#include "task2.h"
 
 bool checkPrime(unsigned int value)
 {
@@ -37,13 +38,10 @@ unsigned long long nPrime(unsigned n)
 
 unsigned long long nextPrime(unsigned long long value)
 {
-	long long x = value + 1;
-	int flag = 0;
-	while (flag != 1)
+	while (1)
 	{
-		if (checkPrime(x) == 1)
-			flag = 1;
-		x++;
+		value++;
+		if (checkPrime(value))
+			return value;
 	}
-	return(x - 1);
 } 
