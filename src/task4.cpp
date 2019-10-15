@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include "task4.h"
 #include <cstring>
 #include <cstdlib>
@@ -36,7 +38,7 @@ char* sum(char* x, char* y) {
 		else if (symbolRes == 0){
 			char* resultExtended = (char*)malloc(sizeof(char) * (lenOfRes + 1));
 			resultExtended[0] = '1';
-			strcpy_s(resultExtended + 1, lenOfRes, result);
+			strcpy(resultExtended + 1, result);
 			free(result);
 			resultExtended[1] = digitX - '0' + digitY + remainder - 10;
 			return resultExtended;
