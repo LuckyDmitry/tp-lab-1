@@ -16,20 +16,16 @@ bool checkPrime(unsigned int value)
 }
 
 unsigned long long nPrime(unsigned n)
-{
-	int i = 1;
-	long long x = 1;
-
-	while (i != n)
-	{
-		if (checkPrime(x) == 1)
-		{
-			i++;
+{	
+	int i = 0;
+	int cnt = 0;
+	while (cnt != n){
+		if (checkPrime(i)){
+			cnt++;
 		}
-		x++;
+		i++;
 	}
-	return x-1;
-
+	return i-1;
 }
 
 unsigned long long nextPrime(unsigned long long value)
