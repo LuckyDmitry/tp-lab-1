@@ -10,6 +10,7 @@ void split(char*** result, int* N, char* buf, char ch)
 			(*N)++;
 		}
 	}
+	(*N)++;
 	*result = new char* [*N];
 	char* temp_str = new char[len];
 	int cnt = 0;

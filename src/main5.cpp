@@ -6,7 +6,7 @@ using namespace std;
 int main()
 { 
 	char ch = ';';
-	int N = 1;
+	int N = 0;
 	char** result;
 	char buf[] = "abc;defey;123";
 	split(&result, &N, buf, ch);
