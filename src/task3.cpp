@@ -30,7 +30,7 @@ unsigned long long sumPrime(unsigned int hbound)
 		i++;
 	}
 
-	for (i = 1; i <= hbound; i++)
+	for (i = 2; i <= hbound; i++)
 	{
 		S = S + mas[i];
 	}
