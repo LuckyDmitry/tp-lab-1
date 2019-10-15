@@ -13,9 +13,9 @@ bool checkPrime(unsigned int value)
 	}
 
 	if (k == 2)
-		return 1;
+		return true;
 	else
-		return 0;
+		return false;
 }
 
 unsigned long long nPrime(unsigned n)
@@ -26,10 +26,12 @@ unsigned long long nPrime(unsigned n)
 	while (i != n)
 	{
 		if (checkPrime(x) == 1)
+		{
 			i++;
+		}
 		x++;
 	}
-	return (x-1);
+	return x-1;
 
 }
 
