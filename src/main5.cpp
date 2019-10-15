@@ -4,7 +4,7 @@
 
 int main()
 {
-	char buf[] = "You are having very good time";
+	const char buf[] = "You are having very good time";
 	int N = 0;
 	char **result = NULL;
 
