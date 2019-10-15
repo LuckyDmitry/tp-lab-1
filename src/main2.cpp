@@ -4,9 +4,8 @@
 
 int main()
 {
-	long long n = 11;
-	printf("\ncheckPrime=%lld", checkPrime(n));
-	printf("\nnPrime=%lld", nPrime(n));
-	printf("\nnextPrime=%lld", nextPrime(n));
+	printf("\ncheckPrime=%lld", checkPrime(11));
+	printf("\nnPrime=%lld", nPrime(11));
+	printf("\nnextPrime=%lld", nextPrime(11));
 	return 1;
 } 
