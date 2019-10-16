@@ -126,14 +126,12 @@ char * sum(char *x, char *y)
 
 	for (long int i = length; i >= 0; i--)
 	{
-		if (res[i] == 0)
+		if ((res[i] == 0) && ((0 > res[i]) || (res[i] > 9)))
 			length--;
 		else
 			break;
 	}
 	
-	if (res[length] == 0)
-		length--;
 
 	long int j = length - 1;
 
