@@ -124,11 +124,13 @@ char * sum(char *x, char *y)
 	}
 
 
-
-
-
-	if (res[length] == 0)
-		length--;
+	for (long int i = length; i >= 0; i--)
+	{
+		if (res[i] == 0)
+			length--;
+		else
+			break;
+	}
 
 	long int j = length - 1;
 
