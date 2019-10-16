@@ -3,8 +3,9 @@
 using namespace std;
 
 int main(){
-    char string1[] = { "99999998" };
+    char string1[] = { "99999999" };
 	char string2[] = { "1" };
+    cin >> string1 >> string2;
     char * outter = sum(string1, string2);
     for(int i = 0; ; i++){
         cout << outter[i] << " ";
