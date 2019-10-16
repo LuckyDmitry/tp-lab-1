@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <cstdlib>
 #include <malloc.h>
+#include <string.h>
 
 char * sum(char *x, char *y)
 {
