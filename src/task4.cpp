@@ -8,7 +8,7 @@ char * sum(char *x, char *y)
 {
 	long long int x1;
 	long long int y1;
-	long int temp;
+	long long int temp;
 	x1 = atoll(x);
 	y1 = atoll(y);
 	long long int sizea;
@@ -133,7 +133,7 @@ char * sum(char *x, char *y)
 	}
 	
 
-	long int j = length - 1;
+	long long int j = length - 1;
 
 	for (long long int i = 0; i < length; i++)
 	{
