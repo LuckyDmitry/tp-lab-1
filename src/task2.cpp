@@ -42,13 +42,11 @@ unsigned long long nextPrime(unsigned long long value) {
         return 2;
     if (value == 2)     //Чтобы не было проблем с четными числами
         return 3;
-//    unsigned long long num = value + 2;
-//    while (!checkPrime(num))
-//        num += 2;
-//    return num;
+//  
     if (value % 2 == 0)
         value += 3;
-    value += 2;
+    else
+        value += 2;
     while (!checkPrime(value))
         value += 2;
     return value;
