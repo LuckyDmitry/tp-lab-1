@@ -91,7 +91,7 @@ char * sum(char *x, char *y)
 				mas1[i + 1] += (mas1[i] / 10);
 				mas1[i] %= 10;
 			}
-			else if ((0 > mas1[i]) || (mas1[i] > 9))
+			else if ((0 < mas1[i]) || (mas1[i] > 9))
 
 				mas1[i] = 0;
 		}
@@ -126,7 +126,7 @@ char * sum(char *x, char *y)
 
 	for (long int i = length; i >= 0; i--)
 	{
-		if ((res[i] == 0) || ((0 > res[i]) || (res[i] > 9)))
+		if ((res[i] == 0) || ((0 < res[i]) || (res[i] > 9)))
 			length--;
 		else
 			break;
