@@ -22,7 +22,7 @@ void split(char ***result, int *N, char *buf, char ch)
 			str[num_let] = buf[j];
 			num_let++;
 		}
-		if ((buf[j] == ch) || (buf[j] == '\0'))
+		else
 		{
 			str[num_let] = '\0';
 			(*result)[num_str] = str;
