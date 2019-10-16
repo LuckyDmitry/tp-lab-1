@@ -1,8 +1,11 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include "../include/task1.h"
 using namespace std;
 
 int main(){
-    cout << findValue(1, 5) << endl;
+    unsigned int min, max;
+    cin >> min >> max;
+    cout << findValue(min, max);
 	return 0;
 }
