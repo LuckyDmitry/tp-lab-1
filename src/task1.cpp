@@ -7,13 +7,14 @@
 //
 
 #include "task1.h"
-
+//   Написать программу, определяющую, какое самое маленькое положительное целое 
+//   число делится на все числа из диапазона [1...20] без остатка.
 unsigned long findValue(unsigned int min,unsigned max){
-    int startValue = max;
+    int startValue = max; //начальное значение будет max 
     for (int i=min; i< max+1; i++){
-        while (startValue%i!=0){
-            startValue+=max;
-            i=min;
+        if (startValue%i!=0){ //до тех пор пока не найдем число на которое не делится 
+            startValue+=max; 
+            i=min; //откатываю i до min
         }
     }
     return startValue;
