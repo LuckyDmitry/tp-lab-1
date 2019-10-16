@@ -131,6 +131,9 @@ char * sum(char *x, char *y)
 		else
 			break;
 	}
+	
+	if (res[length] == 0)
+		length--;
 
 	long int j = length - 1;
 
