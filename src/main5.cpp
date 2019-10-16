@@ -13,4 +13,4 @@ int main()
 		std::cout << result[i] << "\n";
 	}
 	return 0;
-}
+} 

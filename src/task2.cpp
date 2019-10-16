@@ -1,6 +1,6 @@
 #include "task2.h"
 
-
+ 
 bool checkPrime(unsigned int value)
 {
 	for (unsigned int i = 2; i <= value-1; i++)
