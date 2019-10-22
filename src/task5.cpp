@@ -6,32 +6,34 @@
 
 void split(char ***result, int *N, char *buf, char ch)
 {
-	*N = 1;
-	int len = strlen(buf);
+	const char *s = &ch;
+	int len;
+	int size = strlen(buf);
 
-	for (int i = 0; i < len; i++)
-	{ 
-		if (*(buf + i) == ch) 
-			*N +=1; 
+	for (int i = 0; i < size; i++)
+	{
+		if (buf[i] == ch)
+		{
+			(*N)++;
+		}
 	}
 
-	*result = (char**)malloc(*N * sizeof(char*));
+	char * pch = strtok(buf, s);
+
+	*result = (char**)malloc(sizeof(char*) * ((*N) + 1));
+
 	int i = 0;
-
-	for (int j = 0; j < *N; j++)
+	while (pch != NULL)
 	{
-		int lenstr = 0;
+		len = strlen(pch);
 
-		while ((*(buf + 1) != 0) && (*(buf + i) != ch))
-		{	
-			i++;
-			lenstr++;
-		}
+		*(*result + i) = (char*)malloc((len + 1) * sizeof(char));
+		memset(*(*result + i), 0, (len + 1) * sizeof(char));
 
-		*(*result + j) = (char*)malloc((lenstr + 1) * sizeof(char));
+		strncpy(*(*result + i), pch, len);
 
-		strncpy(*(*result + j), buf + (i - lenstr), lenstr);
-		*(*(*result + j) + lenstr) = 0;
+		pch = strtok(NULL, s);
 		i++;
 	}
-} 
+
+}
