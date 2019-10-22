@@ -11,6 +11,7 @@ char * sum(char *x, char *y)
 	long long int temp;
 	x1 = atoll(x);
 	y1 = atoll(y);
+
 	long long int sizea;
 	long long int sizeb;
 
@@ -23,7 +24,7 @@ char * sum(char *x, char *y)
 		sizeb = strlen(x);
 	}
 
-	else
+	else if (x1 >= y1)
 	{
 		sizea = strlen(x);
 		sizeb = strlen(y);
@@ -41,24 +42,8 @@ char * sum(char *x, char *y)
 	int *res;
 	int *ser;
 
-
-	if (sizea > sizeb)
-	{
-		res = (int *)malloc(sizeof(int)*(sizea + 1));
-		memset(mas2, 0, sizea + 1);
-		ser = (int *)malloc(sizeof(int)*(sizea + 1));
-		memset(ser, 0, sizea + 1);
-	}
-
-	else
-	{
-		res = (int *)malloc(sizeof(int)*(sizeb+1));
-		memset(mas2, 0, sizeb);
-		ser = (int *)malloc(sizeof(int)*(sizeb + 1));
-		memset(ser, 0, sizeb + 1);
-	}
-
-
+	res = (int *)malloc(sizeof(int)*(sizea + 1));
+	ser = (int *)malloc(sizeof(int)*(sizea + 1));
 
 	for (long long int i = 0; i < sizea; i++)
 	{
@@ -72,82 +57,59 @@ char * sum(char *x, char *y)
 		y1 = y1 / 10;
 	}
 
-	if (sizea == sizeb)
-		length = sizea + 1;
 
-	else
+	for (long long int i = 0; i < (sizea + 1); i++) 
 	{
-		length = sizea;
-	}
-
-	if (sizea != sizeb)  
-	{
-		
-		for (long long int i = 0; i < length; i++)
-		{
-			if (i <= sizeb - 1)
-			{
-				mas1[i] += mas2[i];
-				mas1[i + 1] += (mas1[i] / 10);
-				mas1[i] %= 10;
-			}
-			else if ((0 > mas1[i]) || (mas1[i] > 9))
-
-				mas1[i] = 0;
-		}
-
-		for (long long int i = 0; i < length; i++)
-		{
-			res[i] = mas1[i];
-		}
-	}
-
-	else
-	{
-		for (long long int i = 0; i < length; i++)
-		{
-			
-			if (i < length - 2)
-			{
-				mas1[i] += mas2[i];
-				mas1[i + 1] += (mas1[i] / 10);
-				mas1[i] %= 10;
-				res[i] = mas1[i];
-			}
-			else if (i == (length - 2))
-			{
-				mas1[i] += mas2[i];
-				res[i] = mas1[i] % 10;
-				res[i + 1] = mas1[i] / 10;
-			}
-		}
+		res[i] = 0;
+		ser[i] = 0;
 	}
 
 
-	for (long long int i = length; i >= 0; i--)
+
+	for (long long int i = 0; i < (sizea + 1); i++) /*главный цикл*/
+	{
+		if (i <= sizeb - 1)
+		{
+			res[i] = mas1[i] + mas2[i] + res[i];
+			res[i + 1] = (res[i] / 10);
+			res[i] %= 10;
+		}
+		else if (i < sizea)
+		{
+			res[i] = mas1[i] + res[i];
+			res[i + 1] = (res[i] / 10);
+			res[i] %= 10;
+		}
+	}
+
+	length = sizea + 1;
+
+	for (long long int i = sizea; i >= 0; i--)
 	{
 		if ((res[i] == 0) || (0 > res[i]) || (res[i] > 9))
+		{
 			length--;
+		}
 		else
 			break;
 	}
-	
 
 	long long int j = length - 1;
 
-	for (long long int i = 0; i < length; i++)
+	for (long long int i = 0; i <= length; i++)
 	{
 		ser[i] = res[j];
 		j--;
+
 	}
 
 
 	char* sum = (char *)malloc(sizeof(char) * (length));
 	memset(sum, 0, sizeof(char) * (length));
-	
+
 	for (long long int i = 0; i < length; i++)
 	{
-		sprintf(sum+i, "%d", ser[i]);
+		sprintf(sum + i, "%d", ser[i]);
 	}
 
 	return(sum);
