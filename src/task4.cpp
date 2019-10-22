@@ -1,116 +1,47 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <cstdlib>
-#include <malloc.h>
+#include "task4.h"
 #include <string.h>
+#include <malloc.h>
 
 char * sum(char *x, char *y)
 {
-	long long int x1;
-	long long int y1;
-	long long int temp;
-	x1 = atoll(x);
-	y1 = atoll(y);
+	int len;
+	int len1 = strlen(x);
+	int len2 = strlen(y);
 
-	long long int sizea;
-	long long int sizeb;
-
-	if (y1 > x1)
+	if (len1 > len2)
 	{
-		temp = x1;
-		x1 = y1;
-		y1 = temp;
-		sizea = strlen(y);
-		sizeb = strlen(x);
+		len = len1;
+	}
+	else
+	{
+		len = len2;
 	}
 
-	else if (x1 >= y1)
+	char *sum = (char*)malloc((len + 1) * sizeof(char));
+	int S = 0;
+
+	for (int i = 1; i <= len + 1; i++)
 	{
-		sizea = strlen(x);
-		sizeb = strlen(y);
-	}
-
-	long long int length;
-
-
-	int *mas1 = (int *)malloc(sizeof(int)*sizea);
-	memset(mas1, 0, sizea);
-
-	int *mas2 = (int *)malloc(sizeof(int)*sizeb);
-	memset(mas2, 0, sizeb);
-
-	int *res;
-	int *ser;
-
-	res = (int *)malloc(sizeof(int)*(sizea + 1));
-	ser = (int *)malloc(sizeof(int)*(sizea + 1));
-
-	for (long long int i = 0; i < sizea; i++)
-	{
-		mas1[i] = x1 % 10;
-		x1 = x1 / 10;
-	}
-
-	for (long long int i = 0; i < sizeb; i++)
-	{
-		mas2[i] = y1 % 10;
-		y1 = y1 / 10;
-	}
-
-
-	for (long long int i = 0; i < (sizea + 1); i++) 
-	{
-		res[i] = 0;
-		ser[i] = 0;
-	}
-
-
-
-	for (long long int i = 0; i < (sizea + 1); i++) /*главный цикл*/
-	{
-		if (i <= sizeb - 1)
+		if (i <= len1)
 		{
-			res[i] = mas1[i] + mas2[i] + res[i];
-			res[i + 1] = (res[i] / 10);
-			res[i] %= 10;
+			S = S + (*(x + (len1 - i)) - '0');
 		}
-		else if (i < sizea)
+		if (i <= len2)
 		{
-			res[i] = mas1[i] + res[i];
-			res[i + 1] = (res[i] / 10);
-			res[i] %= 10;
+			S = S + (*(y + (len2 - i)) - '0');
+		}
+		*(sum + len + 1 - i) = S % 10 + '0';
+		S = S / 10;
+	}
+
+	*(sum + len + 1) = 0;
+
+	if (*(sum) == '0')
+	{
+		for (int i = 0; i <= len; i++)
+		{
+			*(sum + i) = *(sum + i + 1);
 		}
 	}
-
-	length = sizea + 1;
-
-	for (long long int i = sizea; i >= 0; i--)
-	{
-		if ((res[i] == 0) || (0 > res[i]) || (res[i] > 9))
-		{
-			length--;
-		}
-		else
-			break;
-	}
-
-	long long int j = length - 1;
-
-	for (long long int i = 0; i <= length; i++)
-	{
-		ser[i] = res[j];
-		j--;
-
-	}
-
-
-	char* sum = (char *)malloc(sizeof(char) * (length));
-	memset(sum, 0, sizeof(char) * (length));
-
-	for (long long int i = 0; i < length; i++)
-	{
-		sprintf(sum + i, "%d", ser[i]);
-	}
-
-	return(sum);
+	return sum;
 }
