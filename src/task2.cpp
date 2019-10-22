@@ -8,7 +8,7 @@ bool checkPrime(unsigned int value)
 		if (value % i == 0) 
 			fl = 0;
 	}
-	return(fl);
+	return fl;
 }
 
 unsigned long long nPrime(unsigned n)
@@ -21,7 +21,7 @@ unsigned long long nPrime(unsigned n)
 		if (checkPrime(value)) 
 			k++;
 	}
-	return (value);
+	return value;
 }
 
 unsigned long long nextPrime(unsigned long long value)
@@ -34,5 +34,5 @@ unsigned long long nextPrime(unsigned long long value)
 		if (checkPrime(val))
 			fl = 0;
 	}
-	return(val);
+	return val;
 }
