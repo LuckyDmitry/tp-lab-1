@@ -1,38 +1,37 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include <string.h>
-#include <cstdlib> 
-#include <cstddef>
+
+#include "task5.h"
+#include<malloc.h>
+#include<string.h>
 
 void split(char ***result, int *N, char *buf, char ch)
 {
-	const char *s = &ch;
-	int len;
-	int size = strlen(buf);
+	*N = 1;
+	int len = strlen(buf);
 
-	for (int i = 0; i < size; i++)
-	{
-		if (buf[i] == ch)
-		{
-			(*N)++;
-		}
+	for (int i = 0; i < len; i++)
+	{ 
+		if (*(buf + i) == ch) 
+			*N +=1; 
 	}
 
-	char * pch = strtok(buf, s); 
-
-	*result = (char**)malloc(sizeof(char*) * ((*N)+1));
-
+	*result = (char**)malloc(*N * sizeof(char*));
 	int i = 0;
-	while (pch != NULL)                   
+
+	for (int j = 0; j < *N; j++)
 	{
-		len = strlen(pch);
+		int lenstr = 0;
 
-		*(*result + i) = (char*)malloc((len + 1) * sizeof(char));
-		memset(*(*result + i), 0, (len + 1) * sizeof(char));
+		while ((*(buf + 1) != 0) && (*(buf + i) != ch))
+		{	
+			i++;
+			lenstr++;
+		}
 
-		strncpy(*(*result + i), pch, len);
+		*(*result + j) = (char*)malloc((lenstr + 1) * sizeof(char));
 
-		pch = strtok(NULL, s);
+		strncpy(*(*result + j), buf + (i - lenstr), lenstr);
+		*(*(*result + j) + lenstr) = 0;
 		i++;
 	}
-
 } 
