@@ -1,6 +1,6 @@
 #include <iostream>
 #include "task1.h"
-
+ 
 int main()
 {
 	unsigned int min, max;
@@ -10,4 +10,4 @@ int main()
 	getchar();
 	getchar();
 	return 0;
-} 
+}

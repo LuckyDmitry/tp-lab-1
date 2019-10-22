@@ -1,7 +1,7 @@
 #include <iostream>
 #include "task5.h"
 #include <string.h>
-
+ 
 int main()
 {
 	char **result;
@@ -13,4 +13,4 @@ int main()
 		std::cout << result[i] << "\n";
 	}
 	return 0;
-} 
+}

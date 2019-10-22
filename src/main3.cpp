@@ -1,6 +1,6 @@
 #include "task3.h"
 #include <iostream>
-
+ 
 int main()
 {
 	int n;
@@ -9,4 +9,4 @@ int main()
 	getchar();
 	getchar();
 	return 0;
-} 
+}
