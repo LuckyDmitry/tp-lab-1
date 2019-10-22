@@ -8,9 +8,9 @@ int main()
 	char **result = NULL;
 
 	split(&result, &N, buf, ' ');
-	for (int i = 0; i < N; i++)
+	for (int i = 0; i < N + 1; i++)
 	{
-		puts(*(result + i));
+		printf("%s\n", result[i]);
 	}
 	return 1;
 }
