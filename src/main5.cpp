@@ -1,18 +1,16 @@
 #define _CRT_SECURE_NO_WARNINGS
+
 #include "task5.h"
 #include <iostream>
 
-int main()
-{
-	char buf[] = "You are having very good time";
+int main() {
+	char *buf = "123,456,789";
 	int N = 0;
-	char **result = NULL;
-
-	split(&result, &N, buf, ' ');
-
-	for (int i = 0; i < N+1; ++i)
+	char **result = nullptr;
+	split(&result, &N, buf, ',');
+	for (int i = 0; i < N; i++)
 	{
-		printf("%s\n", result[i]);
+		puts(*(result + i));
 	}
-	return 1;
-}  
+	return 0;
+}
