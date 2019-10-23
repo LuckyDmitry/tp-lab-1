@@ -1,13 +1,10 @@
 #include "task5.h"
 #include <malloc.h>
 #include <string.h>
-#include <cstddef>
-#include <cstdlib> 
 
 void split(char ***result, int *N, char *buf, char ch)
 {
-	const char *s = &ch;
-	int len;
+	*N = 1;
 	int size = strlen(buf);
 
 	for (int i = 0; i < size; i++)
@@ -18,22 +15,23 @@ void split(char ***result, int *N, char *buf, char ch)
 		}
 	}
 
-	char * pch = strtok(buf, s);
-
 	*result = (char**)malloc(sizeof(char*) * (*N));
-
 	int i = 0;
-	while (pch != NULL)
+
+	for (int j = 0; j < (*N); j++)
 	{
-		len = strlen(pch);
+		int len = 0;
 
-		*(*result + i) = (char*)malloc((len + 1) * sizeof(char));
-		memset(*(*result + i), 0, (len + 1) * sizeof(char));
+		while ((*(buf + 1) != 0) && (*(buf + i) != ch))
+		{
+			i++;
+			len++;
+		}
 
-		strncpy(*(*result + i), pch, len);
+		*(*result + j) = (char*)malloc((len + 1) * sizeof(char));
 
-		pch = strtok(NULL, s);
+		strncpy(*(*result + j), buf + (i - len), len);
+		*(*(*result + j) + len) = 0;
 		i++;
 	}
-
 }
