@@ -1,3 +1,4 @@
+#include "task3.h"
 #include <malloc.h>
 
 unsigned long long sumPrime(unsigned int hbound)
