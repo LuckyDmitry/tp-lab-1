@@ -20,7 +20,7 @@ void split(char ***result, int *N, char *buf, char ch)
 
 	char * pch = strtok(buf, s);
 
-	*result = (char**)malloc(sizeof(char*) * ((*N) + 1));
+	*result = (char**)malloc(sizeof(char*) * (*N));
 
 	int i = 0;
 	while (pch != NULL)
