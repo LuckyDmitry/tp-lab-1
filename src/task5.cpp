@@ -1,7 +1,7 @@
 #include "task5.h"
 #include <iostream>
 #include <string.h>
-
+ 
 
 void split(char ***result, int *N, char *buf, char ch)
 { 

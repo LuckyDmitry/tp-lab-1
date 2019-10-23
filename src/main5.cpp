@@ -1,9 +1,9 @@
 #include <iostream>
 #include "task5.h"
 #include <string.h>
- 
+  
 int main()
-{
+{ 
 	char **result;
 	char buf[] = "Hello world i am a programmer";
 	int N = 0;

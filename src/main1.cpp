@@ -1,7 +1,7 @@
 #include <iostream>
 #include "task1.h"
  
-int main()
+int main() 
 {
 	unsigned int min, max;
 	std::cin >> min;
