@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+#include "task1.h"
 
 unsigned long findValue(unsigned int min, unsigned max)
 {
