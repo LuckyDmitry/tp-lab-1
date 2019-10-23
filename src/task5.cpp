@@ -35,7 +35,7 @@ void split(char ***result, int *N, char *buf, char ch)
 			*(*result + step) = s;
 			step++;
 			count = 0;
-			delete[] s;
+
 			s = new char[strlen(buf)];
 		}
 	}
