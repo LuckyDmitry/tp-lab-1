@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 
 # Make PROJECT_SOURCE_DIR, PROJECT_BINARY_DIR, and PROJECT_NAME available.
-set(PROJECT_NAME task1) 
+set(PROJECT_NAME task1)
 project(${PROJECT_NAME})
 
 set(CMAKE_CXX_FLAGS "-g -Wall")
@@ -20,8 +20,7 @@ file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
 
 set(SRC_FILES1 ${PROJECT_SOURCE_DIR}/src/task1.cpp)
 set(SRC_FILES2 ${PROJECT_SOURCE_DIR}/src/task2.cpp)
-set(SRC_FILES3 ${PROJECT_SOURCE_DIR}/src/task2.cpp
-               ${PROJECT_SOURCE_DIR}/src/task3.cpp)              
+set(SRC_FILES3 ${PROJECT_SOURCE_DIR}/src/task3.cpp)
 set(SRC_FILES4 ${PROJECT_SOURCE_DIR}/src/task4.cpp)
 set(SRC_FILES5 ${PROJECT_SOURCE_DIR}/src/task5.cpp)
 
@@ -53,38 +52,38 @@ target_link_libraries(task5 task5_lib)
 option(BUILD_TESTS "Build all tests." OFF) # Makes boolean 'test' available.
 
 if (BUILD_TESTS)
-  # This adds another subdirectory, which has 'project(gtest)'.
-  add_subdirectory(ext/gtest-1.8.0)
+    # This adds another subdirectory, which has 'project(gtest)'.
+    add_subdirectory(ext/gtest-1.8.0)
 
-  enable_testing()
+    enable_testing()
 
-  # Include the gtest library. gtest_SOURCE_DIR is available due to
-  # 'project(gtest)' above.
-  include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
+    # Include the gtest library. gtest_SOURCE_DIR is available due to
+    # 'project(gtest)' above.
+    include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
-  ##############
-  # Unit Tests
-  ##############
-  add_executable(runUnitTests ${TEST_SRC_FILES})
+    ##############
+    # Unit Tests
+    ##############
+    add_executable(runUnitTests ${TEST_SRC_FILES})
 
-  # Standard linking to gtest stuff.
-  target_link_libraries(runUnitTests gtest gtest_main)
+    # Standard linking to gtest stuff.
+    target_link_libraries(runUnitTests gtest gtest_main)
 
-  # Extra linking for the project.
-  target_link_libraries(runUnitTests task1_lib task2_lib task3_lib task4_lib task5_lib)
+    # Extra linking for the project.
+    target_link_libraries(runUnitTests task1_lib task2_lib task3_lib task4_lib task5_lib)
 
-  # This is so you can do 'make test' to see all your tests run, instead of
-  # manually running the executable runUnitTests to see those specific tests.
-  add_test(UnitTests runUnitTests)
+    # This is so you can do 'make test' to see all your tests run, instead of
+    # manually running the executable runUnitTests to see those specific tests.
+    add_test(UnitTests runUnitTests)
 
-  set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/.travis/cmake)
+    set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/.travis/cmake)
 
-  if (CMAKE_BUILD_TYPE STREQUAL "Coverage")
-    include(CodeCoverage)
-    setup_target_for_coverage(${PROJECT_NAME}_coverage runUnitTests coverage)
+    if (CMAKE_BUILD_TYPE STREQUAL "Coverage")
+        include(CodeCoverage)
+        setup_target_for_coverage(${PROJECT_NAME}_coverage runUnitTests coverage)
 
-    SET(CMAKE_CXX_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
-    SET(CMAKE_C_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
-  endif() #CMAKE_BUILD_TYPE STREQUAL "Coverage"
+        SET(CMAKE_CXX_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
+        SET(CMAKE_C_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
+    endif () #CMAKE_BUILD_TYPE STREQUAL "Coverage"
 
-endif()
+endif ()
