@@ -3,31 +3,24 @@
 
 void split(char*** result, int* N, char* buf, char ch)
 {
-    int counter = 0;
-    char* newBuffer = new char[strlen(buf) + 1];
-    for (unsigned long long  i = 0; i < strlen(buf); i++)
-    {
+    int counter = 1;
+    int size = strlen(buf);
+    char* newBuffer = new char[size + 1];
+    for (int i = 0; i < size; ++i){
         newBuffer[i] = buf[i];
-        if (buf[i] == ch)
-            counter++;
+        if (buf[i] == ch) ++counter;
     }
-    newBuffer[strlen(buf)] = '\0';
-    char** res = new char* [counter + 1];
+    newBuffer[size] = '\0';
+    char** res = new char* [counter];
 
     res[0] = newBuffer;
     int j = 1;
-    for (unsigned long long i = 0; i < strlen(buf); i++)
-    {
-        if (buf[i] == ch)
-        {
+    for (int i = 0; i < size; ++i){
+        if (buf[i] == ch){
             newBuffer[i] = '\0';
-            if (i != strlen(buf))
-            {
-                res[j] = &newBuffer[i + 1];
-                j++;
-            }
+            res[j++] = &newBuffer[i + 1];
         }
     }
     *result = res;
-    *N = counter + 1;
+    *N = counter;
 }
