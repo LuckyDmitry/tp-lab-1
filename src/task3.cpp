@@ -7,7 +7,6 @@ unsigned long long sumPrime(unsigned int hbound)
 		num = 2;
 	while (num < hbound)
 	{
-		cout << num << endl;
 		num = nextPrime(num);
 		sum = sum + num;
 	}
