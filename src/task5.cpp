@@ -12,12 +12,12 @@ void split(char*** result, int* N, char* buf, char ch)
 	}
 	(*N)++;
 
-	i = 0;
+	
 
 	*result = new char* [*N];
-	char* check = new char[n];
+	char* check = new char[i];
 	*(*result) = check;
-
+	i = 0;
 	int k = 1;
 	while (bif[i] != '\0')
 	{
