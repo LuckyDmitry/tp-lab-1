@@ -4,7 +4,7 @@ using namespace std;
 void split(char*** result, int* N, char* buf, char ch)
 {
 	int i = 0;
-	while(bif[i]!='\0')
+	while(buf[i]!='\0')
 	{
 		if (buf[i] == ch)
 			(*N)++;
@@ -19,7 +19,7 @@ void split(char*** result, int* N, char* buf, char ch)
 	*(*result) = check;
 	i = 0;
 	int k = 1;
-	while (bif[i] != '\0')
+	while (buf[i] != '\0')
 	{
 		check[i] = buf[i];
 		if (buf[i] == ch)
