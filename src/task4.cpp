@@ -87,7 +87,7 @@ char * sum(char* x, char* y)
 		reverse(s3.begin(), s3.end());
 		
 	}
-	char* result = new char[s3.size()];
+	char* result = new char[s3.size()+1];
 
 	
 	for (int i = 0; i < s3.size(); i++)
@@ -95,6 +95,7 @@ char * sum(char* x, char* y)
 		result[i] = s3[i];
 		
 	}
+	result[s3.size()] = '\0';
 
 	
 
