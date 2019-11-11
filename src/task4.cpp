@@ -34,15 +34,7 @@ char * sum(char* x, char* y)
 		s2.push_back(y[i]);
 	reverse(s2.begin(), s2.end());
 
-	/*for (int i = 0; i < s1.size(); i++)
-	{
-		cout << s1[i];
-	}
-	cout << " ";
-	for (int i = 0; i < s2.size(); i++)
-	{
-		cout << s2[i];
-	}*/
+
 
 
 	int n;
@@ -88,13 +80,15 @@ char * sum(char* x, char* y)
 		k = '1';
 		s3.push_back(k);
 		reverse(s3.begin(), s3.end());
+		char* result = new char[s3.size() + 1];
 
 	}else
 	{
 		reverse(s3.begin(), s3.end());
+		char* result = new char[s3.size()];
 	}
 
-	char* result = new char[s3.size()+1];
+	
 	for (int i = 0; i < s3.size(); i++)
 	{
 		result[i] = s3[i];
