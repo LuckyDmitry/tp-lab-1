@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include <vector>
 #include <cstring>
+#include <algorithm>
 
 
 using namespace std;
