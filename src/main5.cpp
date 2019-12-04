@@ -1,13 +1,13 @@
-#include <iostream>
 #include "../include/task5.h"
-using namespace std;
+#include <iostream>
 
 int main(){
-	char str[] = "Hello.world.cruel.world.bye";
-	char divide = '.';
-	int N = 0;
-	char** result;
-	split(&result, &N, str, divide);
-    for(int i = 0;i < 5 ;i++) cout << result[i] << " ";
-    cout << endl;
-}
+    char buf[] = "123,456,789";
+    int N = 0;
+    char** result = nullptr;
+    split(&result, &N, buf, ',');
+    for (int i = 0; i < N; i++)
+    {
+        cout << result[i] << endl;
+    }
+} 

@@ -1,36 +1,33 @@
 #include "../include/task5.h"
 #include <cstring>
 
-void split(char*** result, int* N, char* buf, char ch) {
-	int buf_len = strlen(buf);
-	int i = 0;
+void split(char*** result, int* N, char* buf, char ch)
+{
+    int counter = 0;
+    char* newBuffer = new char[strlen(buf) + 1];
+    for (unsigned long long  i = 0; i < strlen(buf); i++)
+    {
+        newBuffer[i] = buf[i];
+        if (buf[i] == ch)
+            counter++;
+    }
+    newBuffer[strlen(buf)] = '\0';
+    char** res = new char* [counter + 1];
 
-	for (int i = 0; i < buf_len; i++) {
-		if (buf[i] == ch) {
-			(*N)++;
-		}
-	}
-
-	(*N)++; 
-	*result = new char* [*N]; 
-	char* word = new char[buf_len]; 
-
-	int j = 0;
-	int k = 0;
-
-	for (int i = 0; i < buf_len + 1; i++) {
-		if ((buf[i] != ch) && (buf[i] != '\0')) {
-			word[j] = buf[i]; 
-			j++;
-		}
-		if ((buf[i] == ch) || (buf[i] == '\0')) {
-			word[j] = '\0'; 
-			*(*result + k) = word; 
-			k++; 
-			j = 0; 
-			word = new char[buf_len]; 
-		}
-
-	}
-
+    res[0] = newBuffer;
+    int j = 1;
+    for (unsigned long long i = 0; i < strlen(buf); i++)
+    {
+        if (buf[i] == ch)
+        {
+            newBuffer[i] = '\0';
+            if (i != strlen(buf))
+            {
+                res[j] = &newBuffer[i + 1];
+                j++;
+            }
+        }
+    }
+    *result = res;
+    *N = counter + 1;
 } 
