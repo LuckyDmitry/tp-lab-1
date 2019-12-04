@@ -8,6 +8,6 @@ int main(){
     split(&result, &N, buf, ',');
     for (int i = 0; i < N; i++)
     {
-        cout << result[i] << endl;
+        std::cout << result[i] << std::endl;
     }
 } 
