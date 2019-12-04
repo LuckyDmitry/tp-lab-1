@@ -1,10 +1,10 @@
 #include "../include/task4.h"
-#include <string>
+#include <cstring>
 #include <iostream>
 
 char* sum(char* x, char* y){
-	int lengthX = len(x);
-	int lengthY = len(y);
+	int lengthX = strlen(x);
+	int lengthY = strlen(y);
 	int maxLength = lengthX > lengthY ? lengthX : lengthY;
 	--lengthX;
 	--lengthY;
