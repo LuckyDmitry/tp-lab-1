@@ -1,6 +1,6 @@
 #ifndef TASK5_H
 #define TASK5_H
-using std::string;
+using namespace std;
 void split(char ***result, int *N, char *buf, char ch);
 
 #endif
