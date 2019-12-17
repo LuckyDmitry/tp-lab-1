@@ -1,31 +1,43 @@
-#include <cstring>
 #include "task5.h"
+#include <iostream>
+#include <string.h>
+using namespace std;
 
+void split(char ***result, int *N, char *buf, char ch){
+    if(!buf) return;
+    *N = 1;
+    const int len = strlen(buf);
+    for (int i = 0; i < len; i++){
+        if (buf[i] == ch){
+            (*N)++;
+        }
+    }
+    *result = new char*[*N];
 
-void split(char*** result, int* N, char* buf, char ch)
-{
-	int len = strlen(buf);
-	for (int i = 0; i < len; i++){
-		if (buf[i] == ch){
-			(*N)++;
-		}
-	}
-	(*N)++;
-	*result = new char* [*N];
-	char* temp_str = new char[len];
-	int cnt = 0;
-	int substr = 0;
-	for (int i = 0; i < len+1; i++) {
-		if ((buf[i] != ch) && (buf[i] != '\0')) {
-			temp_str[cnt] = buf[i];
-			cnt++;
-		}
-		if ((buf[i] == ch) || (buf[i] == '\0')) {
-			temp_str[cnt] = '\0';
-			*(*result + substr) = temp_str;
-			temp_str = new char[len];
-			substr++;
-			cnt = 0;
-		}
-	}
-} 
+    int prevSeparatorIndex = 0;  // Индекс предыдущего разделителя
+    int currentSubString = 0; // Индекс текущей обрабатываемой подстроки
+
+    for(int i = 0; i < len; i++)
+    {
+        if(buf[i] == ch)
+        {
+            // Выделяем память под подстроку и символ окончания
+            *(*result + currentSubString) = new char[i - prevSeparatorIndex + 1];
+            // Копируем из исходной строки элемент от prevSeparatorIndex до i
+            strcpy(*(*result+currentSubString), &buf[prevSeparatorIndex]);
+            // Устанавливаем символ окончания строки
+            *(*(*result + currentSubString)+(i - prevSeparatorIndex)) = '\0';
+            prevSeparatorIndex = i + 1;
+            currentSubString++;
+        }
+        else if(i == len - 1)
+        {
+            // Выделяем память под подстроку и символ окончания
+            *(*result + currentSubString) = new char[i - prevSeparatorIndex + 1];
+            // Копируем из исходной строки элемент от prevSeparatorIndex до i
+            strcpy(*(*result+currentSubString), &buf[prevSeparatorIndex]);
+            // Устанавливаем символ окончания строки
+            *(*(*result + currentSubString)+(i - prevSeparatorIndex + 1)) = '\0';
+        }
+    }
+}
