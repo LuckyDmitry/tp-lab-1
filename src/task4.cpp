@@ -42,9 +42,9 @@ char* sum(char* x, char* y)
 		str1[i] = '0' + (tmp % 10);
 		str1[i + 1] = tmp / 10 + '0';
 	}
-	if (str1[max-1] == '0') 
-		str1[max-1] = '\0';
-	for (int i = 0, n = strlen(str1); i < n / 2; i++)
+	if (str1[max] == '0') 
+		str1[max] = '\0';
+	for (int i = 0, n = strlen(str1); i < n / 2 + 1; i++)
 	{
 		char tmp = str1[i];
 		str1[i] = str1[n - i - 1];
