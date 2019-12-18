@@ -15,10 +15,10 @@ char* sum(char* x, char* y)
 		max = strlen(y);
 		min = strlen(x);
 	}
-	char* str1 = (char*)malloc(sizeof(char) * (max + 1));
-	char* str2 = (char*)malloc(sizeof(char) * (max));
-	char* str3 = (char*)malloc(sizeof(char) * (max));
-	str1[max + 1] = '\0';
+	char* str1 = (char*)malloc(sizeof(char) * (max + 2));
+	char* str2 = (char*)malloc(sizeof(char) * (max+1));
+	char* str3 = (char*)malloc(sizeof(char) * (max+1));
+	str1[max+1] = '\0';
 	str2[max] = '\0';
 	str3[max] = '\0';
 
@@ -29,7 +29,6 @@ char* sum(char* x, char* y)
 		str3[i] = '0';
 	}
 	str1[max] = '0';
-
 
 	for (int i = 0; i < strlen(x); i++)
 		str2[i] = x[strlen(x) - 1 - i];
@@ -43,13 +42,15 @@ char* sum(char* x, char* y)
 		str1[i] = '0' + (tmp % 10);
 		str1[i + 1] = tmp / 10 + '0';
 	}
-	if (str1[max] == '0') 
-		str1[max] = '\0';
+	if (str1[max-1] == '0') 
+		str1[max-1] = '\0';
 	for (int i = 0, n = strlen(str1); i < n / 2; i++)
 	{
 		char tmp = str1[i];
 		str1[i] = str1[n - i - 1];
 		str1[n - i - 1] = tmp;
 	}
+	free(str2);
+	free(str3);
 	return str1;
 }
